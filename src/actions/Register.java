@@ -7,6 +7,9 @@ import momentary.PageNow;
 import output.CommandOutput;
 import output.Output;
 
+import static constants.Constants.HOMEPAGE;
+import static constants.Constants.REGISTER;
+
 public class Register extends Command {
     public Register(final Input input, final PageNow pageNow, final ActionInput actionInput,
                     final Output output) {
@@ -19,7 +22,7 @@ public class Register extends Command {
     @Override
     public void run() {
         // if page is register and another user is not registered already
-        if (super.getPageNow().getName().equals("register")
+        if (super.getPageNow().getName().equals(REGISTER)
                 && super.getPageNow().getUser().getUser() == null
                 && !super.getPageNow().getUserCommands().userExists(super.getInput(),
                 super.getActionInput())) {
@@ -37,14 +40,14 @@ public class Register extends Command {
                     super.getPageNow().getUser().getUser()));
 
             // set page to homepage with authentication
-            super.getPageNow().setName("homepage");
+            super.getPageNow().setName(HOMEPAGE);
 
             // exit
             return;
         }
 
         // set page back to homepage in case of error
-        super.getPageNow().setName("homepage");
+        super.getPageNow().setName(HOMEPAGE);
         super.getOutput().getOutput().add(new CommandOutput());
     }
 }

@@ -1,6 +1,13 @@
 package navigators;
 
-interface NavigateCommand {
+public interface NavigateCommand {
+    /**
+     * execute named navigation command
+     */
     void execute();
-    void undo();
+
+    /**
+     * undo named navigation command
+     */
+    String undo();
 }

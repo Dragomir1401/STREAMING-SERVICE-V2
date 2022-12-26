@@ -14,6 +14,8 @@ import output.Output;
 import java.util.ArrayList;
 import java.util.List;
 
+import static constants.Constants.MOVIES;
+
 public class Search extends Command {
 
     public Search(final Input input, final PageNow pageNow, final ActionInput actionInput,
@@ -27,7 +29,7 @@ public class Search extends Command {
     @Override
     public void run() {
         // check to see if we are on movies page
-        if (super.getPageNow().getName().equals("movies")) {
+        if (super.getPageNow().getName().equals(MOVIES)) {
 
             // initialise filters
             Strategy strategy = new StartsWithStrategy();

@@ -16,6 +16,8 @@ import sorters.SortByRating;
 import java.util.ArrayList;
 import java.util.List;
 
+import static constants.Constants.MOVIES;
+
 public class Filter extends Command {
 
     public Filter(final Input input, final PageNow pageNow, final ActionInput actionInput,
@@ -28,7 +30,7 @@ public class Filter extends Command {
      */
     @Override
     public void run() {
-        if (super.getPageNow().getName().equals("movies")) {
+        if (super.getPageNow().getName().equals(MOVIES)) {
             // initialise filter
             FilterByCountry filterByCountry = new FilterByCountry();
 

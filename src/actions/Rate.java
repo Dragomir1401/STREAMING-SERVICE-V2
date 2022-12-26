@@ -6,6 +6,9 @@ import momentary.PageNow;
 import output.CommandOutput;
 import output.Output;
 
+import static constants.Constants.SEE_DETAILS;
+import static constants.Constants.UPGRADES;
+
 public class Rate extends Command {
 
 
@@ -20,8 +23,8 @@ public class Rate extends Command {
     @Override
     public void run() {
         // check to see if we are on correct page
-        if (super.getPageNow().getName().equals("see details")
-                || super.getPageNow().getName().equals("upgrades")) {
+        if (super.getPageNow().getName().equals(SEE_DETAILS)
+                || super.getPageNow().getName().equals(UPGRADES)) {
             super.getPageNow().getMoviesCommands().rateMovie(super.getInput(), super.getPageNow(),
                     super.getOutput(), super.getActionInput());
             return;

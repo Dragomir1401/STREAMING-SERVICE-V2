@@ -8,6 +8,9 @@ import output.Output;
 import java.util.ArrayList;
 import java.util.List;
 
+import static constants.Constants.HOMEPAGE;
+import static constants.Constants.REGISTER;
+
 public class GoToRegister implements NavigateCommand {
     private final PageNow pageNow;
     private final Output output;
@@ -23,18 +26,25 @@ public class GoToRegister implements NavigateCommand {
         this.previousName = null;
     }
 
+
+
+    /**
+     * execute named navigation command
+     */
     @Override
     public void execute() {
-        if (pageNow.getName().equals("homepage") && pageNow.getUser().getUser() == null) {
+        if (pageNow.getName().equals(HOMEPAGE) && pageNow.getUser().getUser() == null) {
 
             // save previous state for undo
             previousName = pageNow.getName();
-            previousMovie = new MovieInput(pageNow.getMovie());
+            if (pageNow.getMovie() != null)
+                previousMovie = new MovieInput(pageNow.getMovie());
             previousMovieList = new ArrayList<>();
-            previousMovieList.addAll(pageNow.getMovieList());
+            if (pageNow.getMovieList() != null)
+                previousMovieList.addAll(pageNow.getMovieList());
 
             // set register start
-            pageNow.setName("register");
+            pageNow.setName(REGISTER);
             pageNow.setMovie(null);
             pageNow.setMovieList(null);
         } else {
@@ -42,12 +52,19 @@ public class GoToRegister implements NavigateCommand {
         }
     }
 
+
+    /**
+     * undo named navigation command
+     * @return  previous page name
+     */
     @Override
-    public void undo() {
+    public String undo() {
         // reset actions done
         pageNow.setName(previousName);
         pageNow.setMovie(previousMovie);
         pageNow.setMovieList(previousMovieList);
+
+        return previousName;
     }
 
 }

@@ -4,9 +4,11 @@ import input.MovieInput;
 import momentary.PageNow;
 import output.CommandOutput;
 import output.Output;
-
 import java.util.ArrayList;
 import java.util.List;
+import static constants.Constants.LOGIN;
+import static constants.Constants.HOMEPAGE;
+
 
 public class GoToLogin implements NavigateCommand {
     private final PageNow pageNow;
@@ -23,30 +25,41 @@ public class GoToLogin implements NavigateCommand {
         this.previousName = null;
     }
 
+    /**
+     * execute named navigation command
+     */
     @Override
     public void execute() {
-        if (pageNow.getName().equals("homepage") && pageNow.getUser().getUser() == null) {
+        if (!pageNow.getName().equals(HOMEPAGE) || pageNow.getUser().getUser() != null) {
+            output.getOutput().add(new CommandOutput());
+        } else {
 
             // save previous state for undo
             previousName = pageNow.getName();
-            previousMovie = new MovieInput(pageNow.getMovie());
+            if (pageNow.getMovie() != null)
+                previousMovie = new MovieInput(pageNow.getMovie());
             previousMovieList = new ArrayList<>();
-            previousMovieList.addAll(pageNow.getMovieList());
+            if (pageNow.getMovieList() != null)
+                previousMovieList.addAll(pageNow.getMovieList());
 
-            // set register start
-            pageNow.setName("login");
+            // set login start
+            pageNow.setName(LOGIN);
             pageNow.setMovie(null);
             pageNow.setMovieList(null);
-        } else {
-            output.getOutput().add(new CommandOutput());
         }
     }
 
+
+
+    /**
+     * undo named navigation command
+     * @return  previous page name
+     */
     @Override
-    public void undo() {
+    public String undo() {
         // reset actions done
-        pageNow.setName(previousName);
-        pageNow.setMovie(previousMovie);
-        pageNow.setMovieList(previousMovieList);
+        output.getOutput().add(new CommandOutput());
+
+        return previousName;
     }
 }

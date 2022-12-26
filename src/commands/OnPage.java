@@ -16,6 +16,8 @@ import input.ActionInput;
 import momentary.PageNow;
 import output.Output;
 
+import static constants.Constants.*;
+
 
 public final class OnPage {
     private OnPage() {
@@ -34,36 +36,36 @@ public final class OnPage {
         if (action.getFeature() != null) {
             // select command type and factory its class
             switch (action.getFeature()) {
-                case "register" -> {
+                case REGISTER -> {
                     return new Register(input, pageNow, action, output);
                 }
-                case "login" -> {
+                case LOGIN -> {
                     return new Login(input, pageNow, action, output);
                 }
-                case "filter" -> {
+                case FILTER -> {
                     return new Filter(input, pageNow, action, output);
                 }
-                case "buy tokens" -> {
+                case BUY_TOKENS -> {
                     return new BuyTokens(input, pageNow, action, output);
                 }
-                case "like" -> {
+                case LIKE -> {
                     return new Like(input, pageNow, action, output);
                 }
-                case "rate" -> {
+                case RATE -> {
                     return new Rate(input, pageNow, action, output);
                 }
-                case "purchase" -> {
+                case PURCHASE -> {
                     return new Purchase(input, pageNow, action, output);
                 }
-                case "watch" -> {
+                case WATCH -> {
                     return new Watch(input, pageNow, action, output);
                 }
-                case "search" -> {
+                case SEARCH -> {
                     return new Search(input, pageNow, action, output);
                 }
-                case "buy premium account" -> {
+                case BUY_PREMIUM_ACCOUNT -> {
                     return new BuyPremium(input, pageNow, action,
-                            output);
+                                output);
                 }
                 default -> throw new IllegalArgumentException("The command type "
                         + action.getFeature() + " is not recognized.");
@@ -89,6 +91,4 @@ public final class OnPage {
         assert command != null;
         command.run();
     }
-
-
 }

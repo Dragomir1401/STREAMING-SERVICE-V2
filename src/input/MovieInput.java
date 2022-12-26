@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class MovieInput {
     private String name;
-    private int year;
+    private String year;
     private int duration;
     private ArrayList<String> genres;
     private ArrayList<String> actors;
@@ -27,11 +27,14 @@ public class MovieInput {
         this.numRatings = movieInput.numRatings;
         this.year = movieInput.year;
         this.genres = new ArrayList<>();
-        this.genres.addAll(movieInput.genres);
         this.actors = new ArrayList<>();
-        this.actors.addAll(movieInput.actors);
         this.countriesBanned = new ArrayList<>();
-        this.countriesBanned.addAll(movieInput.countriesBanned);
+        if (movieInput.getGenres() != null)
+            this.genres.addAll(movieInput.getGenres());
+        if (movieInput.getActors() != null)
+            this.actors.addAll(movieInput.getActors());
+        if (movieInput.getCountriesBanned() != null)
+            this.countriesBanned.addAll(movieInput.getCountriesBanned());
     }
 
 
@@ -39,7 +42,7 @@ public class MovieInput {
      * reset movie instance
      */
     public void resetMovie() {
-        this.year = 0;
+        this.year = null;
         this.duration = 0;
         this.name = null;
         this.numLikes = 0;
@@ -92,7 +95,7 @@ public class MovieInput {
      * getter for year
      * @return  year
      */
-    public int getYear() {
+    public String getYear() {
         return year;
     }
 
@@ -102,7 +105,7 @@ public class MovieInput {
      * setter for year
      * @param year  year
      */
-    public void setYear(final int year) {
+    public void setYear(final String year) {
         this.year = year;
     }
 

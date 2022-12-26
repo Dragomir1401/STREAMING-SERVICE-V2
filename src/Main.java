@@ -1,3 +1,5 @@
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import commands.HomepageSetter;
 import momentary.PageNow;
@@ -10,6 +12,7 @@ import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 public final class Main {
 
@@ -28,7 +31,8 @@ public final class Main {
         // initialise mapper
         ObjectMapper objectMapper = new ObjectMapper();
 
-        for (int i = 1; i <= numberOfTests; i++) {
+        int i = 4;
+//        for (int i = 1; i <= numberOfTests; i++) {
             // test filename and out filename
             String inputFile = "./checker/resources/in/basic_" + i + ".json";
             String outputFile = "./checker/resources/out/basic_" + i + ".json";
@@ -47,7 +51,7 @@ public final class Main {
             // differentiate commands and begin program ENTRY POINT
             CommandParser.parse(programInput, pageNow, programOutput);
 
-            // generate output
+            // generate output and ignore subscribed genres for output
             ObjectWriter writer = objectMapper.writer(new DefaultPrettyPrinter());
             writer.writeValue(new File(outputFile), programOutput.getOutput());
 
@@ -57,7 +61,7 @@ public final class Main {
             // reset input
             programInput.getUsers().forEach(UserInput::resetUser);
             programInput.getMovies().forEach(MovieInput::resetMovie);
-        }
+//        }
     }
 }
 

@@ -6,6 +6,8 @@ import momentary.PageNow;
 import output.CommandOutput;
 import output.Output;
 
+import static constants.Constants.UPGRADES;
+
 public class BuyTokens extends Command {
 
     public BuyTokens(final Input input, final PageNow pageNow, final ActionInput actionInput,
@@ -19,7 +21,7 @@ public class BuyTokens extends Command {
     @Override
     public void run() {
         // check to see if we are on correct page
-        if (super.getPageNow().getName().equals("upgrades")) {
+        if (super.getPageNow().getName().equals(UPGRADES)) {
             super.getPageNow().getTokensCommands().buyTokens(
                     super.getPageNow().getUser().getUser(), super.getActionInput(),
                     super.getOutput());

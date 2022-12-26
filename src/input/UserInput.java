@@ -1,10 +1,13 @@
 package input;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.List;
 import java.util.ArrayList;
 
 import static constants.Constants.NUM_FREE_PREMIUM_MOVIES;
 
+@JsonIgnoreProperties(value = { "subscribedGenre" })
 public class UserInput {
     private CredentialsInput credentials;
     private List<MovieInput> purchasedMovies = new ArrayList<>();
@@ -14,6 +17,7 @@ public class UserInput {
     private int tokensCount;
     private int numFreePremiumMovies = NUM_FREE_PREMIUM_MOVIES;
     private List<NotificationInput> notifications = new ArrayList<>();
+    private List<String> subscribedGenre = new ArrayList<>();
 
     public UserInput() {
 
@@ -32,6 +36,8 @@ public class UserInput {
         this.likedMovies = new ArrayList<>();
         this.ratedMovies = new ArrayList<>();
         this.notifications = new ArrayList<>();
+        this.subscribedGenre = new ArrayList<>();
+        this.subscribedGenre.addAll(userInput.getSubscribedGenre());
         this.notifications.addAll(userInput.getNotifications());
         this.purchasedMovies.addAll(userInput.getPurchasedMovies());
         this.watchedMovies.addAll(userInput.getWatchedMovies());
@@ -52,6 +58,7 @@ public class UserInput {
         this.likedMovies = new ArrayList<>();
         this.ratedMovies = new ArrayList<>();
         this.notifications = new ArrayList<>();
+        this.subscribedGenre = new ArrayList<>();
         this.numFreePremiumMovies = NUM_FREE_PREMIUM_MOVIES;
         this.tokensCount = 0;
     }
@@ -67,6 +74,7 @@ public class UserInput {
         this.likedMovies = new ArrayList<>();
         this.ratedMovies = new ArrayList<>();
         this.notifications = new ArrayList<>();
+        this.subscribedGenre = new ArrayList<>();
         this.tokensCount = 0;
         this.numFreePremiumMovies = NUM_FREE_PREMIUM_MOVIES;
     }
@@ -211,5 +219,13 @@ public class UserInput {
      */
     public void setNotifications(List<NotificationInput> notifications) {
         this.notifications = notifications;
+    }
+
+    /**
+     * getter for subscribed genres
+     * @return  genres
+     */
+    public List<String> getSubscribedGenre() {
+        return subscribedGenre;
     }
 }

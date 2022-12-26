@@ -2,6 +2,8 @@ package navigators;
 
 import java.util.LinkedList;
 
+import static constants.Constants.POOR_UNDO;
+
 public class Invoker {
     private final LinkedList<NavigateCommand> historyExecuted = new LinkedList<>();
     private final LinkedList<NavigateCommand> historyUndo = new LinkedList<>();
@@ -16,7 +18,7 @@ public class Invoker {
 
     /**
      * Executes a given command
-     * @param command - command
+     * @param command  command
      */
     public void execute(NavigateCommand command) {
         historyExecuted.push(command);
@@ -26,14 +28,15 @@ public class Invoker {
     /**
      * Undo the latest command
      */
-    public void undo() {
+    public String undo() {
         if (historyExecuted.isEmpty())
-            return;
+            return POOR_UNDO;
         NavigateCommand navigateCommand = historyExecuted.pop();
         if (navigateCommand != null) {
             historyUndo.push(navigateCommand);
-            navigateCommand.undo();
+            return navigateCommand.undo();
         }
+        return POOR_UNDO;
     }
 
     /**

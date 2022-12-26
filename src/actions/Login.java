@@ -6,6 +6,9 @@ import momentary.PageNow;
 import output.CommandOutput;
 import output.Output;
 
+import static constants.Constants.HOMEPAGE;
+import static constants.Constants.LOGIN;
+
 public class Login extends Command {
     public Login(final Input input, final PageNow pageNow, final ActionInput actionInput,
                  final Output output) {
@@ -18,7 +21,7 @@ public class Login extends Command {
     @Override
     public void run() {
         // if page is not login or user is already logged or user is not in input base
-        if (super.getPageNow().getName().equals("login")
+        if (super.getPageNow().getName().equals(LOGIN)
                 && super.getPageNow().getUser().getUser() == null
                 && super.getPageNow().getUserCommands().userExists(super.getInput(),
                         super.getActionInput())) {
@@ -32,7 +35,7 @@ public class Login extends Command {
                                 super.getActionInput()));
 
                 // set page to homepage with authentication
-                super.getPageNow().setName("homepage");
+                super.getPageNow().setName(HOMEPAGE);
 
                 // add output
                 super.getOutput().getOutput().add(new CommandOutput(
@@ -45,7 +48,7 @@ public class Login extends Command {
         }
 
         // set page back to homepage in case of error
-        super.getPageNow().setName("homepage");
+        super.getPageNow().setName(HOMEPAGE);
         super.getOutput().getOutput().add(new CommandOutput());
     }
 }

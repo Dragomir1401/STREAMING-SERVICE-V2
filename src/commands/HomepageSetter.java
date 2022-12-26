@@ -2,6 +2,8 @@ package commands;
 
 import momentary.PageNow;
 
+import static constants.Constants.HOMEPAGE;
+
 public final class HomepageSetter {
     private HomepageSetter() {
 
@@ -11,6 +13,6 @@ public final class HomepageSetter {
      * @return - the new page
      */
     public static PageNow run() {
-        return new PageNow("homepage");
+        return new PageNow(HOMEPAGE);
     }
 }

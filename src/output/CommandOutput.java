@@ -34,7 +34,7 @@ public class CommandOutput {
 
     /**
      * getter for error
-     * @return - error
+     * @return  error
      */
     public String getError() {
         return error;
@@ -43,7 +43,7 @@ public class CommandOutput {
 
     /**
      * setter for error
-     * @param error - error
+     * @param error  error
      */
     public void setError(final String error) {
         this.error = error;
@@ -52,7 +52,7 @@ public class CommandOutput {
 
     /**
      * getter for current list
-     * @return - list of movies
+     * @return  list of movies
      */
     public List<MovieInput> getCurrentMoviesList() {
         return moviesList;
@@ -61,7 +61,7 @@ public class CommandOutput {
 
     /**
      * setter for current movies
-     * @param moviesInputList - list
+     * @param moviesInputList  list
      */
     public void setCurrentMoviesList(final List<MovieInput> moviesInputList) {
         this.moviesList = moviesInputList;
@@ -70,7 +70,7 @@ public class CommandOutput {
 
     /**
      * getter for current user
-     * @return - user
+     * @return  user
      */
     public UserInput getCurrentUser() {
         return user;
@@ -79,7 +79,7 @@ public class CommandOutput {
 
     /**
      * setter for current user
-     * @param userInput - user
+     * @param userInput  user
      */
     public void setCurrentUser(final UserInput userInput) {
         this.user = userInput;

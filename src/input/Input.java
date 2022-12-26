@@ -21,7 +21,7 @@ public class Input {
 
     /**
      * getter for users
-     * @return - users
+     * @return  users
      */
     public List<UserInput> getUsers() {
         return users;
@@ -30,7 +30,7 @@ public class Input {
 
     /**
      * setter for users
-     * @param users - users
+     * @param users  users
      */
     public void setUsers(final List<UserInput> users) {
         this.users = users;
@@ -39,7 +39,7 @@ public class Input {
 
     /**
      * getter for movies
-     * @return - movies
+     * @return  movies
      */
     public List<MovieInput> getMovies() {
         return movies;
@@ -48,7 +48,7 @@ public class Input {
 
     /**
      * setter for movies
-     * @param movies - movies
+     * @param movies  movies
      */
     public void setMovies(final List<MovieInput> movies) {
         this.movies = movies;
@@ -57,7 +57,7 @@ public class Input {
 
     /**
      * getter for action
-     * @return - action
+     * @return  action
      */
     public List<ActionInput> getActions() {
         return actions;
@@ -66,7 +66,7 @@ public class Input {
 
     /**
      * setter for action
-     * @param actions -actions
+     * @param actions actions
      */
     public void setActions(final List<ActionInput> actions) {
         this.actions = actions;

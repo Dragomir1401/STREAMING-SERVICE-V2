@@ -10,12 +10,13 @@ public class ActionInput {
     private int rate;
     private String movie;
     private  int count;
-
-
+    private String subscribedGenre;
+    private MovieInput addedMovie;
+    private String deletedMovie;
 
     /**
      * getter for type
-     * @return - type
+     * @return  type
      */
     public String getType() {
         return type;
@@ -25,7 +26,7 @@ public class ActionInput {
 
     /**
      * setter for type
-     * @param type - type
+     * @param type  type
      */
     public void setType(final String type) {
         this.type = type;
@@ -35,7 +36,7 @@ public class ActionInput {
 
     /**
      * getter for page
-     * @return - page
+     * @return  page
      */
     public String getPage() {
         return page;
@@ -45,7 +46,7 @@ public class ActionInput {
 
     /**
      * setter for page
-     * @param page - page
+     * @param page  page
      */
     public void setPage(final String page) {
         this.page = page;
@@ -55,7 +56,7 @@ public class ActionInput {
 
     /**
      * getter for feature
-     * @return - feature
+     * @return  feature
      */
     public String getFeature() {
         return feature;
@@ -65,7 +66,7 @@ public class ActionInput {
 
     /**
      * setter for feature
-     * @param feature- feature
+     * @param feature feature
      */
     public void setFeature(final String feature) {
         this.feature = feature;
@@ -75,7 +76,7 @@ public class ActionInput {
 
     /**
      * getter for credentials
-     * @return - credentials
+     * @return  credentials
      */
     public CredentialsInput getCredentials() {
         return credentials;
@@ -85,7 +86,7 @@ public class ActionInput {
 
     /**
      * setter for credentials
-     * @param credentials - credentials
+     * @param credentials  credentials
      */
     public void setCredentials(final CredentialsInput credentials) {
         this.credentials = credentials;
@@ -95,7 +96,7 @@ public class ActionInput {
 
     /**
      * getter for starts with
-     * @return - starts with
+     * @return  starts with
      */
     public String getStartsWith() {
         return startsWith;
@@ -105,7 +106,7 @@ public class ActionInput {
 
     /**
      * getter for filters
-     * @return - filters
+     * @return  filters
      */
     public FilterInput getFilters() {
         return filters;
@@ -115,7 +116,7 @@ public class ActionInput {
 
     /**
      * setter for filters
-     * @param filters - filters
+     * @param filters  filters
      */
     public void setFilters(final FilterInput filters) {
         this.filters = filters;
@@ -125,7 +126,7 @@ public class ActionInput {
 
     /**
      * getter for rate
-     * @return - rate
+     * @return  rate
      */
     public int getRate() {
         return rate;
@@ -135,7 +136,7 @@ public class ActionInput {
 
     /**
      * getter for movie
-     * @return - movie
+     * @return  movie
      */
     public String getMovie() {
         return movie;
@@ -145,7 +146,7 @@ public class ActionInput {
 
     /**
      * setter for movie
-     * @param movie - movie
+     * @param movie  movie
      */
     public void setMovie(final String movie) {
         this.movie = movie;
@@ -155,9 +156,60 @@ public class ActionInput {
 
     /**
      * getter for count
-     * @return - count
+     * @return  count
      */
     public int getCount() {
         return count;
+    }
+
+    /**
+     * getter for subscribed genre
+     * @return  genre
+     */
+    public String getSubscribedGenre() {
+        return subscribedGenre;
+    }
+
+
+    /**
+     * setter for subscribed genre
+     * @param subscribedGenre  genre
+     */
+    public void setSubscribedGenre(String subscribedGenre) {
+        this.subscribedGenre = subscribedGenre;
+    }
+
+    /**
+     * getter for added movie
+     * @return  added movie
+     */
+    public MovieInput getAddedMovie() {
+        return addedMovie;
+    }
+
+
+    /**
+     * setter for added movie
+     * @param addedMovie  added movie
+     */
+    public void setAddedMovie(MovieInput addedMovie) {
+        this.addedMovie = addedMovie;
+    }
+
+    /**
+     * getter for deleted movie
+     * @return  deleted movie
+     */
+    public String getDeletedMovie() {
+        return deletedMovie;
+    }
+
+
+    /**
+     * setter for deleted movie
+     * @param deletedMovie  deleted movie
+     */
+    public void setDeletedMovie(String deletedMovie) {
+        this.deletedMovie = deletedMovie;
     }
 }

@@ -7,7 +7,7 @@ public class FilterInput {
 
     /**
      * getter for sort
-     * @return - sort
+     * @return  sort
      */
     public SortInput getSort() {
         return sort;
@@ -16,7 +16,7 @@ public class FilterInput {
 
     /**
      * setter for sort
-     * @param sort - sort
+     * @param sort  sort
      */
     public void setSort(final SortInput sort) {
         this.sort = sort;
@@ -25,7 +25,7 @@ public class FilterInput {
 
     /**
      * setter for sort
-     * @return - sort
+     * @return  sort
      */
     public ContainsInput getContains() {
         return contains;

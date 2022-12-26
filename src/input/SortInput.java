@@ -8,7 +8,7 @@ public class SortInput {
 
     /**
      * getter for rating
-     * @return - rating
+     * @return  rating
      */
     public String getRating() {
         return rating;
@@ -18,7 +18,7 @@ public class SortInput {
 
     /**
      * setter for rating
-     * @param rating - rating
+     * @param rating  rating
      */
     public void setRating(final String rating) {
         this.rating = rating;
@@ -28,7 +28,7 @@ public class SortInput {
 
     /**
      * getter for duration
-     * @return - duration
+     * @return  duration
      */
     public String getDuration() {
         return duration;
@@ -37,7 +37,7 @@ public class SortInput {
 
     /**
      * setter for duration
-     * @param duration - duration
+     * @param duration  duration
      */
     public void setDuration(final String duration) {
         this.duration = duration;

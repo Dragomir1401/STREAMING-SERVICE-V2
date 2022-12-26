@@ -11,7 +11,7 @@ public class CredentialsInput {
 
     /**
      * getter for name
-     * @return - name
+     * @return  name
      */
     public String getName() {
         return name;
@@ -21,7 +21,7 @@ public class CredentialsInput {
 
     /**
      * setter for name
-     * @param name - name
+     * @param name  name
      */
     public void setName(final String name) {
         this.name = name;
@@ -31,7 +31,7 @@ public class CredentialsInput {
 
     /**
      * getter for password
-     * @return - password
+     * @return  password
      */
     public String getPassword() {
         return password;
@@ -41,7 +41,7 @@ public class CredentialsInput {
 
     /**
      * setter for password
-     * @param password - password
+     * @param password  password
      */
     public void setPassword(final String password) {
         this.password = password;
@@ -51,7 +51,7 @@ public class CredentialsInput {
 
     /**
      * getter for account type
-     * @return - account type
+     * @return  account type
      */
     public String getAccountType() {
         return accountType;
@@ -61,7 +61,7 @@ public class CredentialsInput {
 
     /**
      * setter for account type
-     * @param accountType - account type
+     * @param accountType  account type
      */
     public void setAccountType(final String accountType) {
         this.accountType = accountType;
@@ -71,7 +71,7 @@ public class CredentialsInput {
 
     /**
      * getter for country
-     * @return - country
+     * @return  country
      */
     public String getCountry() {
         return country;
@@ -81,7 +81,7 @@ public class CredentialsInput {
 
     /**
      * setter for country
-     * @param country - country
+     * @param country  country
      */
     public void setCountry(final String country) {
         this.country = country;
@@ -91,7 +91,7 @@ public class CredentialsInput {
 
     /**
      * getter for balance
-     * @return - balance
+     * @return  balance
      */
     public String getBalance() {
         return balance;
@@ -101,7 +101,7 @@ public class CredentialsInput {
 
     /**
      * setter for balance
-     * @param balance - balance
+     * @param balance  balance
      */
     public void setBalance(final String balance) {
         this.balance = balance;

@@ -10,7 +10,7 @@ public class ContainsInput {
 
     /**
      * getter for actors
-     * @return - actors
+     * @return  actors
      */
     public List<String> getActors() {
         return actors;
@@ -20,7 +20,7 @@ public class ContainsInput {
 
     /**
      * setter for actors
-     * @param actors - actors
+     * @param actors  actors
      */
     public void setActors(final List<String> actors) {
         this.actors = actors;
@@ -30,7 +30,7 @@ public class ContainsInput {
 
     /**
      * getter for genre
-     * @return - genre
+     * @return  genre
      */
     public List<String> getGenre() {
         return genre;
@@ -40,7 +40,7 @@ public class ContainsInput {
 
     /**
      * getter for country
-     * @return - country
+     * @return  country
      */
     public List<String> getCountry() {
         return country;
@@ -50,7 +50,7 @@ public class ContainsInput {
 
     /**
      * setter for country
-     * @param country - country
+     * @param country  country
      */
     public void setCountry(final List<String> country) {
         this.country = country;

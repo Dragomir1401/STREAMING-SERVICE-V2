@@ -21,7 +21,7 @@ public abstract class Command {
 
     /**
      * getter for input
-     * @return - input
+     * @return  input
      */
     public Input getInput() {
         return input;
@@ -29,7 +29,7 @@ public abstract class Command {
 
     /**
      * getter for current page
-     * @return - current page
+     * @return  current page
      */
     public PageNow getPageNow() {
         return pageNow;
@@ -38,7 +38,7 @@ public abstract class Command {
 
     /**
      * getter for action input
-     * @return - action input
+     * @return  action input
      */
     public ActionInput getActionInput() {
         return actionInput;
@@ -47,7 +47,7 @@ public abstract class Command {
 
     /**
      * getter for output
-     * @return - output
+     * @return  output
      */
     public Output getOutput() {
         return output;

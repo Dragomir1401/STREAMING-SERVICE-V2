@@ -8,7 +8,7 @@ import java.util.List;
 public interface UserFilter {
     /**
      * user filter interface
-     * @param movies - movie list
+     * @param movies  movie list
      * @param user - user input
      * @return - resulted filtered movie list
      */

@@ -71,7 +71,7 @@ public class MovieInput {
 
     /**
      * getter for name
-     * @return - name
+     * @return  name
      */
     public String getName() {
         return name;
@@ -81,7 +81,7 @@ public class MovieInput {
 
     /**
      * setter for name
-     * @param name - name
+     * @param name  name
      */
     public void setName(final String name) {
         this.name = name;
@@ -90,7 +90,7 @@ public class MovieInput {
 
     /**
      * getter for year
-     * @return - year
+     * @return  year
      */
     public int getYear() {
         return year;
@@ -100,7 +100,7 @@ public class MovieInput {
 
     /**
      * setter for year
-     * @param year - year
+     * @param year  year
      */
     public void setYear(final int year) {
         this.year = year;
@@ -109,7 +109,7 @@ public class MovieInput {
 
     /**
      * getter for duration
-     * @return - duration
+     * @return  duration
      */
     public int getDuration() {
         return duration;
@@ -119,7 +119,7 @@ public class MovieInput {
 
     /**
      * setter for duration
-     * @param duration - duration
+     * @param duration  duration
      */
     public void setDuration(final int duration) {
         this.duration = duration;
@@ -128,7 +128,7 @@ public class MovieInput {
 
     /**
      * getter for genres
-     * @return - genres
+     * @return  genres
      */
     public ArrayList<String> getGenres() {
         return genres;
@@ -138,7 +138,7 @@ public class MovieInput {
 
     /**
      * setter for genres
-     * @param genres - genres
+     * @param genres  genres
      */
     public void setGenres(final ArrayList<String> genres) {
         this.genres = genres;
@@ -147,7 +147,7 @@ public class MovieInput {
 
     /**
      * getter for actors
-     * @return - actors
+     * @return  actors
      */
     public ArrayList<String> getActors() {
         return actors;
@@ -157,7 +157,7 @@ public class MovieInput {
 
     /**
      * setter for actors
-     * @param actors - actors
+     * @param actors  actors
      */
     public void setActors(final ArrayList<String> actors) {
         this.actors = actors;
@@ -166,7 +166,7 @@ public class MovieInput {
 
     /**
      * getter for countries banned
-     * @return - countries banned
+     * @return  countries banned
      */
     public ArrayList<String> getCountriesBanned() {
         return countriesBanned;
@@ -176,7 +176,7 @@ public class MovieInput {
 
     /**
      * setter for countries banned
-     * @param countriesBanned - countries
+     * @param countriesBanned  countries
      */
     public void setCountriesBanned(final ArrayList<String> countriesBanned) {
         this.countriesBanned = countriesBanned;
@@ -185,7 +185,7 @@ public class MovieInput {
 
     /**
      * getter for num likes
-     * @return - num likes
+     * @return  num likes
      */
     public int getNumLikes() {
         return numLikes;
@@ -195,7 +195,7 @@ public class MovieInput {
 
     /**
      * setter for num likes
-     * @param numLikes - num likes
+     * @param numLikes  num likes
      */
     public void setNumLikes(final int numLikes) {
         this.numLikes = numLikes;
@@ -204,7 +204,7 @@ public class MovieInput {
 
     /**
      * getter for rating
-     * @return - rating
+     * @return  rating
      */
     public double getRating() {
         return rating;

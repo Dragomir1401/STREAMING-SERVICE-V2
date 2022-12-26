@@ -8,7 +8,7 @@ import java.util.List;
 public class GenresStrategy implements Strategy {
     /**
      * criteria of containing the given genres
-     * @param movies - movie list
+     * @param movies  movie list
      * @param content - content it has to contain
      * @return - resulted movie list
      */

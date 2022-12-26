@@ -8,7 +8,7 @@ public class Output {
 
     /**
      * getter for output
-     * @return - output
+     * @return  output
      */
     public List<CommandOutput> getOutput() {
         return this.output;

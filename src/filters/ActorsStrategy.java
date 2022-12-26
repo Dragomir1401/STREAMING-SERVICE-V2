@@ -8,7 +8,7 @@ import java.util.List;
 public class ActorsStrategy implements Strategy {
     /**
      * criteria of having given actors in movie
-     * @param movies - movie list
+     * @param movies  movie list
      * @param content - content it has to contain
      * @return - movie list
      */

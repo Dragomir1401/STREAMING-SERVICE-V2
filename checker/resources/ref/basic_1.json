@@ -13,12 +13,13 @@
       "country" : "Ireland",
       "balance" : "300"
     },
+    "tokensCount" : 0,
+    "numFreePremiumMovies" : 15,
     "purchasedMovies" : [ ],
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "tokensCount" : 0,
-    "numFreePremiumMovies" : 15
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",
@@ -43,11 +44,16 @@
       "country" : "Romania",
       "balance" : "50"
     },
+    "tokensCount" : 0,
+    "numFreePremiumMovies" : 15,
     "purchasedMovies" : [ ],
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "tokensCount" : 0,
-    "numFreePremiumMovies" : 15
+    "notifications" : [ ]
   }
+}, {
+  "error" : "Error",
+  "currentMoviesList" : [ ],
+  "currentUser" : null
 } ]

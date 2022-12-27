@@ -9,12 +9,13 @@
       "country" : "Russia",
       "balance" : "300"
     },
+    "tokensCount" : 0,
+    "numFreePremiumMovies" : 15,
     "purchasedMovies" : [ ],
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "tokensCount" : 0,
-    "numFreePremiumMovies" : 15
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -27,12 +28,13 @@
       "country" : "Russia",
       "balance" : "300"
     },
+    "tokensCount" : 0,
+    "numFreePremiumMovies" : 15,
     "purchasedMovies" : [ ],
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "tokensCount" : 0,
-    "numFreePremiumMovies" : 15
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -45,12 +47,13 @@
       "country" : "Russia",
       "balance" : "300"
     },
+    "tokensCount" : 0,
+    "numFreePremiumMovies" : 15,
     "purchasedMovies" : [ ],
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "tokensCount" : 0,
-    "numFreePremiumMovies" : 15
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",

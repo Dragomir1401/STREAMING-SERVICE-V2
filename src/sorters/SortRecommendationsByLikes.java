@@ -12,28 +12,12 @@ public class SortRecommendationsByLikes implements RecommendationSort {
     @Override
     public void run(List<RecommendationElement> likedGenres, String parameter) {
         if (parameter.equals(INCREASING)) {
-            likedGenres.sort((o1, o2) -> {
-                int cmp = o1.getLikeCount() - o2.getLikeCount();
-                if (cmp != 0) {
-                    return -cmp;
-                } else {
-                    cmp = o1.getGenre().compareTo(o2.getGenre());
-                }
-                return cmp;
-            });
+            likedGenres.sort(Comparator.comparingInt(RecommendationElement::getLikeCount));
             return;
         }
 
         if (parameter.equals(DECREASING)) {
-            likedGenres.sort((o1, o2) -> {
-                int cmp = o1.getLikeCount() - o2.getLikeCount();
-                if (cmp != 0) {
-                    return cmp;
-                } else {
-                    cmp = o1.getGenre().compareTo(o2.getGenre());
-                }
-                return -cmp;
-            });
+            likedGenres.sort((o1, o2) -> o2.getLikeCount() - o1.getLikeCount());
         }
 
     }

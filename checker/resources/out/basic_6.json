@@ -1,18 +1,17 @@
 [ {
   "error" : "Error",
-  "currentMoviesList" : [ ],
-  "currentUser" : null
+  "currentUser" : null,
+  "currentMoviesList" : [ ]
 }, {
   "error" : "Error",
-  "currentMoviesList" : [ ],
-  "currentUser" : null
+  "currentUser" : null,
+  "currentMoviesList" : [ ]
 }, {
   "error" : "Error",
-  "currentMoviesList" : [ ],
-  "currentUser" : null
+  "currentUser" : null,
+  "currentMoviesList" : [ ]
 }, {
   "error" : null,
-  "currentMoviesList" : [ ],
   "currentUser" : {
     "credentials" : {
       "name" : "Iancu",
@@ -21,187 +20,17 @@
       "country" : "Japan",
       "balance" : "50"
     },
+    "purchasedMovies" : [ ],
+    "watchedMovies" : [ ],
+    "likedMovies" : [ ],
+    "ratedMovies" : [ ],
     "tokensCount" : 0,
     "numFreePremiumMovies" : 15,
-    "purchasedMovies" : [ ],
-    "watchedMovies" : [ ],
-    "likedMovies" : [ ],
-    "ratedMovies" : [ ],
     "notifications" : [ ]
-  }
+  },
+  "currentMoviesList" : [ ]
 }, {
   "error" : null,
-  "currentMoviesList" : [ {
-    "name" : "Lord, Save Us from Your Followers",
-    "year" : "1998",
-    "duration" : 125,
-    "genres" : [ "Comedy", "Western", "Mystery" ],
-    "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
-    "countriesBanned" : [ "Russia", "Saudi Arabia", "Zimbabwe" ],
-    "numLikes" : 0,
-    "rating" : 0.00,
-    "numRatings" : 0
-  }, {
-    "name" : "Take the Money and Run",
-    "year" : "2006",
-    "duration" : 134,
-    "genres" : [ "Thriller", "Western", "Mystery" ],
-    "actors" : [ "Hailey Evequot", "Fenelia Maryott", "Gloriane Haughton", "Evvie Asbery" ],
-    "countriesBanned" : [ "Indonesia", "China", "India" ],
-    "numLikes" : 0,
-    "rating" : 0.00,
-    "numRatings" : 0
-  }, {
-    "name" : "Penelope",
-    "year" : "2008",
-    "duration" : 166,
-    "genres" : [ "Fantasy", "Drama", "Thriller" ],
-    "actors" : [ "Elnore Neild", "Gay Cobbing", "Guntar Holton", "Merry Troni" ],
-    "countriesBanned" : [ "Azerbaijan", "China", "India" ],
-    "numLikes" : 0,
-    "rating" : 0.00,
-    "numRatings" : 0
-  }, {
-    "name" : "Kiwi!",
-    "year" : "2002",
-    "duration" : 82,
-    "genres" : [ "Western", "Mystery", "Romance" ],
-    "actors" : [ "Carleen Pidgeon", "Lois Gibling", "Colver Corss", "Mora Piotrkowski" ],
-    "countriesBanned" : [ "Brazil", "China", "Russia" ],
-    "numLikes" : 0,
-    "rating" : 0.00,
-    "numRatings" : 0
-  }, {
-    "name" : "Little Foxes, The",
-    "year" : "1999",
-    "duration" : 128,
-    "genres" : [ "Horror", "Action", "Thriller" ],
-    "actors" : [ "Coleen Verheijden", "Dean McCooke", "Melamie Griswaite", "Clementine Loding" ],
-    "countriesBanned" : [ "Brazil", "Philippines", "Poland" ],
-    "numLikes" : 0,
-    "rating" : 0.00,
-    "numRatings" : 0
-  }, {
-    "name" : "The Empty Hours",
-    "year" : "2003",
-    "duration" : 106,
-    "genres" : [ "Fantasy", "Thriller", "Mystery" ],
-    "actors" : [ "Holly Sandbrook", "Phyllys Lindsell", "Bendick Bointon", "Dani Duigenan" ],
-    "countriesBanned" : [ "Indonesia", "Brazil", "Uganda" ],
-    "numLikes" : 0,
-    "rating" : 0.00,
-    "numRatings" : 0
-  }, {
-    "name" : "Jason's Lyric",
-    "year" : "1994",
-    "duration" : 103,
-    "genres" : [ "Drama", "Mystery", "Western" ],
-    "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
-    "countriesBanned" : [ "Romania", "China", "Finland" ],
-    "numLikes" : 0,
-    "rating" : 0.00,
-    "numRatings" : 0
-  }, {
-    "name" : "Comet in Moominland",
-    "year" : "2000",
-    "duration" : 91,
-    "genres" : [ "Mystery", "Horror", "Western" ],
-    "actors" : [ "Bertina Kemshell", "Marshall Bysshe", "Dexter Rickaert", "Zack Brandel" ],
-    "countriesBanned" : [ "Brazil", "China", "Colombia" ],
-    "numLikes" : 0,
-    "rating" : 0.00,
-    "numRatings" : 0
-  }, {
-    "name" : "Bag It",
-    "year" : "2008",
-    "duration" : 149,
-    "genres" : [ "Drama", "Horror", "Fantasy" ],
-    "actors" : [ "Rivy Aitken", "Farra Simnor", "Korie Sager", "Pauli Stapford" ],
-    "countriesBanned" : [ "China", "Sweden", "Finland" ],
-    "numLikes" : 0,
-    "rating" : 0.00,
-    "numRatings" : 0
-  }, {
-    "name" : "Shaolin Temple (Shao Lin si)",
-    "year" : "1987",
-    "duration" : 135,
-    "genres" : [ "Horror", "Western", "Drama" ],
-    "actors" : [ "Dallon Audenis", "Anica Wrigley", "Perrine Baskwell", "Pammie Bowmaker" ],
-    "countriesBanned" : [ "China", "Norway", "United States" ],
-    "numLikes" : 0,
-    "rating" : 0.00,
-    "numRatings" : 0
-  }, {
-    "name" : "Belphecor: Curse of the Mummy (Belphégor - Le fantôme du Louvre)",
-    "year" : "1988",
-    "duration" : 178,
-    "genres" : [ "Drama", "Comedy", "Fantasy" ],
-    "actors" : [ "Florella Snoday", "Obie Dowsing", "Lynnea Denington", "Chrystal Evreux" ],
-    "countriesBanned" : [ "China", "Sweden", "Costa Rica" ],
-    "numLikes" : 0,
-    "rating" : 0.00,
-    "numRatings" : 0
-  }, {
-    "name" : "Endangered Species",
-    "year" : "1994",
-    "duration" : 79,
-    "genres" : [ "Mystery", "Fantasy", "Drama" ],
-    "actors" : [ "Morry Lunny", "Freda Werrett", "Jewel Gareisr", "Carine Cucinotta" ],
-    "countriesBanned" : [ "France", "South Africa", "Indonesia" ],
-    "numLikes" : 0,
-    "rating" : 0.00,
-    "numRatings" : 0
-  }, {
-    "name" : "Celluloid Closet, The",
-    "year" : "2002",
-    "duration" : 155,
-    "genres" : [ "Comedy", "Thriller", "Horror" ],
-    "actors" : [ "Betta MacAughtrie", "Miltie Vousden", "Rand Eliasson", "Calypso Jamson" ],
-    "countriesBanned" : [ "Indonesia", "Argentina", "China" ],
-    "numLikes" : 0,
-    "rating" : 0.00,
-    "numRatings" : 0
-  }, {
-    "name" : "As You Like It",
-    "year" : "1999",
-    "duration" : 91,
-    "genres" : [ "Romance", "Horror", "Thriller" ],
-    "actors" : [ "Maureene Elks", "Amber McGilbon", "Lora Doelle", "Blondelle Spyvye" ],
-    "countriesBanned" : [ "China", "Venezuela", "India" ],
-    "numLikes" : 0,
-    "rating" : 0.00,
-    "numRatings" : 0
-  }, {
-    "name" : "The Well-Digger's Daughter",
-    "year" : "1994",
-    "duration" : 141,
-    "genres" : [ "Crime", "Mystery", "Drama" ],
-    "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
-    "countriesBanned" : [ "China", "South Africa", "India" ],
-    "numLikes" : 0,
-    "rating" : 0.00,
-    "numRatings" : 0
-  }, {
-    "name" : "Mistress",
-    "year" : "2012",
-    "duration" : 146,
-    "genres" : [ "Thriller", "Drama", "Fantasy" ],
-    "actors" : [ "Maighdiln Moroney", "Robinett Fennick", "Candice Hacquel", "Arlene Challoner" ],
-    "countriesBanned" : [ "Greece", "Czech Republic", "Malaysia" ],
-    "numLikes" : 0,
-    "rating" : 0.00,
-    "numRatings" : 0
-  }, {
-    "name" : "Indiana Jones and the Temple of Doom",
-    "year" : "2012",
-    "duration" : 88,
-    "genres" : [ "Drama", "Comedy", "Mystery" ],
-    "actors" : [ "Samuel Murtell", "Ansel Ryburn", "Rickert Farmery", "Ernst Malcher" ],
-    "countriesBanned" : [ "Nigeria", "Lithuania", "Burkina Faso" ],
-    "numLikes" : 0,
-    "rating" : 0.00,
-    "numRatings" : 0
-  } ],
   "currentUser" : {
     "credentials" : {
       "name" : "Iancu",
@@ -210,17 +39,75 @@
       "country" : "Japan",
       "balance" : "0"
     },
+    "purchasedMovies" : [ ],
+    "watchedMovies" : [ ],
+    "likedMovies" : [ ],
+    "ratedMovies" : [ ],
     "tokensCount" : 50,
     "numFreePremiumMovies" : 15,
-    "purchasedMovies" : [ ],
-    "watchedMovies" : [ ],
-    "likedMovies" : [ ],
-    "ratedMovies" : [ ],
     "notifications" : [ ]
-  }
-}, {
-  "error" : null,
+  },
   "currentMoviesList" : [ {
+    "name" : "Lord, Save Us from Your Followers",
+    "year" : "1998",
+    "duration" : 125,
+    "genres" : [ "Comedy", "Western", "Mystery" ],
+    "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
+    "countriesBanned" : [ "Russia", "Saudi Arabia", "Zimbabwe" ],
+    "numLikes" : 0,
+    "rating" : 0.0,
+    "numRatings" : 0
+  }, {
+    "name" : "Take the Money and Run",
+    "year" : "2006",
+    "duration" : 134,
+    "genres" : [ "Thriller", "Western", "Mystery" ],
+    "actors" : [ "Hailey Evequot", "Fenelia Maryott", "Gloriane Haughton", "Evvie Asbery" ],
+    "countriesBanned" : [ "Indonesia", "China", "India" ],
+    "numLikes" : 0,
+    "rating" : 0.0,
+    "numRatings" : 0
+  }, {
+    "name" : "Penelope",
+    "year" : "2008",
+    "duration" : 166,
+    "genres" : [ "Fantasy", "Drama", "Thriller" ],
+    "actors" : [ "Elnore Neild", "Gay Cobbing", "Guntar Holton", "Merry Troni" ],
+    "countriesBanned" : [ "Azerbaijan", "China", "India" ],
+    "numLikes" : 0,
+    "rating" : 0.0,
+    "numRatings" : 0
+  }, {
+    "name" : "Kiwi!",
+    "year" : "2002",
+    "duration" : 82,
+    "genres" : [ "Western", "Mystery", "Romance" ],
+    "actors" : [ "Carleen Pidgeon", "Lois Gibling", "Colver Corss", "Mora Piotrkowski" ],
+    "countriesBanned" : [ "Brazil", "China", "Russia" ],
+    "numLikes" : 0,
+    "rating" : 0.0,
+    "numRatings" : 0
+  }, {
+    "name" : "Little Foxes, The",
+    "year" : "1999",
+    "duration" : 128,
+    "genres" : [ "Horror", "Action", "Thriller" ],
+    "actors" : [ "Coleen Verheijden", "Dean McCooke", "Melamie Griswaite", "Clementine Loding" ],
+    "countriesBanned" : [ "Brazil", "Philippines", "Poland" ],
+    "numLikes" : 0,
+    "rating" : 0.0,
+    "numRatings" : 0
+  }, {
+    "name" : "The Empty Hours",
+    "year" : "2003",
+    "duration" : 106,
+    "genres" : [ "Fantasy", "Thriller", "Mystery" ],
+    "actors" : [ "Holly Sandbrook", "Phyllys Lindsell", "Bendick Bointon", "Dani Duigenan" ],
+    "countriesBanned" : [ "Indonesia", "Brazil", "Uganda" ],
+    "numLikes" : 0,
+    "rating" : 0.0,
+    "numRatings" : 0
+  }, {
     "name" : "Jason's Lyric",
     "year" : "1994",
     "duration" : 103,
@@ -228,9 +115,111 @@
     "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
     "countriesBanned" : [ "Romania", "China", "Finland" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
-  } ],
+  }, {
+    "name" : "Comet in Moominland",
+    "year" : "2000",
+    "duration" : 91,
+    "genres" : [ "Mystery", "Horror", "Western" ],
+    "actors" : [ "Bertina Kemshell", "Marshall Bysshe", "Dexter Rickaert", "Zack Brandel" ],
+    "countriesBanned" : [ "Brazil", "China", "Colombia" ],
+    "numLikes" : 0,
+    "rating" : 0.0,
+    "numRatings" : 0
+  }, {
+    "name" : "Bag It",
+    "year" : "2008",
+    "duration" : 149,
+    "genres" : [ "Drama", "Horror", "Fantasy" ],
+    "actors" : [ "Rivy Aitken", "Farra Simnor", "Korie Sager", "Pauli Stapford" ],
+    "countriesBanned" : [ "China", "Sweden", "Finland" ],
+    "numLikes" : 0,
+    "rating" : 0.0,
+    "numRatings" : 0
+  }, {
+    "name" : "Shaolin Temple (Shao Lin si)",
+    "year" : "1987",
+    "duration" : 135,
+    "genres" : [ "Horror", "Western", "Drama" ],
+    "actors" : [ "Dallon Audenis", "Anica Wrigley", "Perrine Baskwell", "Pammie Bowmaker" ],
+    "countriesBanned" : [ "China", "Norway", "United States" ],
+    "numLikes" : 0,
+    "rating" : 0.0,
+    "numRatings" : 0
+  }, {
+    "name" : "Belphecor: Curse of the Mummy (Belphégor - Le fantôme du Louvre)",
+    "year" : "1988",
+    "duration" : 178,
+    "genres" : [ "Drama", "Comedy", "Fantasy" ],
+    "actors" : [ "Florella Snoday", "Obie Dowsing", "Lynnea Denington", "Chrystal Evreux" ],
+    "countriesBanned" : [ "China", "Sweden", "Costa Rica" ],
+    "numLikes" : 0,
+    "rating" : 0.0,
+    "numRatings" : 0
+  }, {
+    "name" : "Endangered Species",
+    "year" : "1994",
+    "duration" : 79,
+    "genres" : [ "Mystery", "Fantasy", "Drama" ],
+    "actors" : [ "Morry Lunny", "Freda Werrett", "Jewel Gareisr", "Carine Cucinotta" ],
+    "countriesBanned" : [ "France", "South Africa", "Indonesia" ],
+    "numLikes" : 0,
+    "rating" : 0.0,
+    "numRatings" : 0
+  }, {
+    "name" : "Celluloid Closet, The",
+    "year" : "2002",
+    "duration" : 155,
+    "genres" : [ "Comedy", "Thriller", "Horror" ],
+    "actors" : [ "Betta MacAughtrie", "Miltie Vousden", "Rand Eliasson", "Calypso Jamson" ],
+    "countriesBanned" : [ "Indonesia", "Argentina", "China" ],
+    "numLikes" : 0,
+    "rating" : 0.0,
+    "numRatings" : 0
+  }, {
+    "name" : "As You Like It",
+    "year" : "1999",
+    "duration" : 91,
+    "genres" : [ "Romance", "Horror", "Thriller" ],
+    "actors" : [ "Maureene Elks", "Amber McGilbon", "Lora Doelle", "Blondelle Spyvye" ],
+    "countriesBanned" : [ "China", "Venezuela", "India" ],
+    "numLikes" : 0,
+    "rating" : 0.0,
+    "numRatings" : 0
+  }, {
+    "name" : "The Well-Digger's Daughter",
+    "year" : "1994",
+    "duration" : 141,
+    "genres" : [ "Crime", "Mystery", "Drama" ],
+    "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
+    "countriesBanned" : [ "China", "South Africa", "India" ],
+    "numLikes" : 0,
+    "rating" : 0.0,
+    "numRatings" : 0
+  }, {
+    "name" : "Mistress",
+    "year" : "2012",
+    "duration" : 146,
+    "genres" : [ "Thriller", "Drama", "Fantasy" ],
+    "actors" : [ "Maighdiln Moroney", "Robinett Fennick", "Candice Hacquel", "Arlene Challoner" ],
+    "countriesBanned" : [ "Greece", "Czech Republic", "Malaysia" ],
+    "numLikes" : 0,
+    "rating" : 0.0,
+    "numRatings" : 0
+  }, {
+    "name" : "Indiana Jones and the Temple of Doom",
+    "year" : "2012",
+    "duration" : 88,
+    "genres" : [ "Drama", "Comedy", "Mystery" ],
+    "actors" : [ "Samuel Murtell", "Ansel Ryburn", "Rickert Farmery", "Ernst Malcher" ],
+    "countriesBanned" : [ "Nigeria", "Lithuania", "Burkina Faso" ],
+    "numLikes" : 0,
+    "rating" : 0.0,
+    "numRatings" : 0
+  } ]
+}, {
+  "error" : null,
   "currentUser" : {
     "credentials" : {
       "name" : "Iancu",
@@ -239,16 +228,14 @@
       "country" : "Japan",
       "balance" : "0"
     },
+    "purchasedMovies" : [ ],
+    "watchedMovies" : [ ],
+    "likedMovies" : [ ],
+    "ratedMovies" : [ ],
     "tokensCount" : 50,
     "numFreePremiumMovies" : 15,
-    "purchasedMovies" : [ ],
-    "watchedMovies" : [ ],
-    "likedMovies" : [ ],
-    "ratedMovies" : [ ],
     "notifications" : [ ]
-  }
-}, {
-  "error" : null,
+  },
   "currentMoviesList" : [ {
     "name" : "Jason's Lyric",
     "year" : "1994",
@@ -257,9 +244,11 @@
     "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
     "countriesBanned" : [ "Romania", "China", "Finland" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
-  } ],
+  } ]
+}, {
+  "error" : null,
   "currentUser" : {
     "credentials" : {
       "name" : "Iancu",
@@ -268,8 +257,6 @@
       "country" : "Japan",
       "balance" : "0"
     },
-    "tokensCount" : 48,
-    "numFreePremiumMovies" : 15,
     "purchasedMovies" : [ {
       "name" : "Jason's Lyric",
       "year" : "1994",
@@ -278,16 +265,16 @@
       "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
       "countriesBanned" : [ "Romania", "China", "Finland" ],
       "numLikes" : 0,
-      "rating" : 0.00,
+      "rating" : 0.0,
       "numRatings" : 0
     } ],
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
+    "tokensCount" : 48,
+    "numFreePremiumMovies" : 15,
     "notifications" : [ ]
-  }
-}, {
-  "error" : null,
+  },
   "currentMoviesList" : [ {
     "name" : "Jason's Lyric",
     "year" : "1994",
@@ -296,9 +283,11 @@
     "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
     "countriesBanned" : [ "Romania", "China", "Finland" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
-  } ],
+  } ]
+}, {
+  "error" : null,
   "currentUser" : {
     "credentials" : {
       "name" : "Iancu",
@@ -307,8 +296,6 @@
       "country" : "Japan",
       "balance" : "0"
     },
-    "tokensCount" : 48,
-    "numFreePremiumMovies" : 15,
     "purchasedMovies" : [ {
       "name" : "Jason's Lyric",
       "year" : "1994",
@@ -317,7 +304,7 @@
       "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
       "countriesBanned" : [ "Romania", "China", "Finland" ],
       "numLikes" : 0,
-      "rating" : 0.00,
+      "rating" : 0.0,
       "numRatings" : 0
     } ],
     "watchedMovies" : [ {
@@ -328,15 +315,64 @@
       "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
       "countriesBanned" : [ "Romania", "China", "Finland" ],
       "numLikes" : 0,
-      "rating" : 0.00,
+      "rating" : 0.0,
       "numRatings" : 0
     } ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
+    "tokensCount" : 48,
+    "numFreePremiumMovies" : 15,
     "notifications" : [ ]
-  }
+  },
+  "currentMoviesList" : [ {
+    "name" : "Jason's Lyric",
+    "year" : "1994",
+    "duration" : 103,
+    "genres" : [ "Drama", "Mystery", "Western" ],
+    "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
+    "countriesBanned" : [ "Romania", "China", "Finland" ],
+    "numLikes" : 0,
+    "rating" : 0.0,
+    "numRatings" : 0
+  } ]
 }, {
   "error" : null,
+  "currentUser" : {
+    "credentials" : {
+      "name" : "Iancu",
+      "password" : "corega",
+      "accountType" : "standard",
+      "country" : "Japan",
+      "balance" : "0"
+    },
+    "purchasedMovies" : [ {
+      "name" : "Jason's Lyric",
+      "year" : "1994",
+      "duration" : 103,
+      "genres" : [ "Drama", "Mystery", "Western" ],
+      "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
+      "countriesBanned" : [ "Romania", "China", "Finland" ],
+      "numLikes" : 0,
+      "rating" : 0.0,
+      "numRatings" : 0
+    } ],
+    "watchedMovies" : [ {
+      "name" : "Jason's Lyric",
+      "year" : "1994",
+      "duration" : 103,
+      "genres" : [ "Drama", "Mystery", "Western" ],
+      "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
+      "countriesBanned" : [ "Romania", "China", "Finland" ],
+      "numLikes" : 0,
+      "rating" : 0.0,
+      "numRatings" : 0
+    } ],
+    "likedMovies" : [ ],
+    "ratedMovies" : [ ],
+    "tokensCount" : 48,
+    "numFreePremiumMovies" : 15,
+    "notifications" : [ ]
+  },
   "currentMoviesList" : [ {
     "name" : "Lord, Save Us from Your Followers",
     "year" : "1998",
@@ -345,7 +381,7 @@
     "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
     "countriesBanned" : [ "Russia", "Saudi Arabia", "Zimbabwe" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Take the Money and Run",
@@ -355,7 +391,7 @@
     "actors" : [ "Hailey Evequot", "Fenelia Maryott", "Gloriane Haughton", "Evvie Asbery" ],
     "countriesBanned" : [ "Indonesia", "China", "India" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Penelope",
@@ -365,7 +401,7 @@
     "actors" : [ "Elnore Neild", "Gay Cobbing", "Guntar Holton", "Merry Troni" ],
     "countriesBanned" : [ "Azerbaijan", "China", "India" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Kiwi!",
@@ -375,7 +411,7 @@
     "actors" : [ "Carleen Pidgeon", "Lois Gibling", "Colver Corss", "Mora Piotrkowski" ],
     "countriesBanned" : [ "Brazil", "China", "Russia" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Little Foxes, The",
@@ -385,7 +421,7 @@
     "actors" : [ "Coleen Verheijden", "Dean McCooke", "Melamie Griswaite", "Clementine Loding" ],
     "countriesBanned" : [ "Brazil", "Philippines", "Poland" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "The Empty Hours",
@@ -395,7 +431,7 @@
     "actors" : [ "Holly Sandbrook", "Phyllys Lindsell", "Bendick Bointon", "Dani Duigenan" ],
     "countriesBanned" : [ "Indonesia", "Brazil", "Uganda" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Jason's Lyric",
@@ -405,7 +441,7 @@
     "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
     "countriesBanned" : [ "Romania", "China", "Finland" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Comet in Moominland",
@@ -415,7 +451,7 @@
     "actors" : [ "Bertina Kemshell", "Marshall Bysshe", "Dexter Rickaert", "Zack Brandel" ],
     "countriesBanned" : [ "Brazil", "China", "Colombia" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Bag It",
@@ -425,7 +461,7 @@
     "actors" : [ "Rivy Aitken", "Farra Simnor", "Korie Sager", "Pauli Stapford" ],
     "countriesBanned" : [ "China", "Sweden", "Finland" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Shaolin Temple (Shao Lin si)",
@@ -435,7 +471,7 @@
     "actors" : [ "Dallon Audenis", "Anica Wrigley", "Perrine Baskwell", "Pammie Bowmaker" ],
     "countriesBanned" : [ "China", "Norway", "United States" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Belphecor: Curse of the Mummy (Belphégor - Le fantôme du Louvre)",
@@ -445,7 +481,7 @@
     "actors" : [ "Florella Snoday", "Obie Dowsing", "Lynnea Denington", "Chrystal Evreux" ],
     "countriesBanned" : [ "China", "Sweden", "Costa Rica" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Endangered Species",
@@ -455,7 +491,7 @@
     "actors" : [ "Morry Lunny", "Freda Werrett", "Jewel Gareisr", "Carine Cucinotta" ],
     "countriesBanned" : [ "France", "South Africa", "Indonesia" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Celluloid Closet, The",
@@ -465,7 +501,7 @@
     "actors" : [ "Betta MacAughtrie", "Miltie Vousden", "Rand Eliasson", "Calypso Jamson" ],
     "countriesBanned" : [ "Indonesia", "Argentina", "China" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "As You Like It",
@@ -475,7 +511,7 @@
     "actors" : [ "Maureene Elks", "Amber McGilbon", "Lora Doelle", "Blondelle Spyvye" ],
     "countriesBanned" : [ "China", "Venezuela", "India" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "The Well-Digger's Daughter",
@@ -485,7 +521,7 @@
     "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
     "countriesBanned" : [ "China", "South Africa", "India" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Mistress",
@@ -495,7 +531,7 @@
     "actors" : [ "Maighdiln Moroney", "Robinett Fennick", "Candice Hacquel", "Arlene Challoner" ],
     "countriesBanned" : [ "Greece", "Czech Republic", "Malaysia" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Indiana Jones and the Temple of Doom",
@@ -505,9 +541,11 @@
     "actors" : [ "Samuel Murtell", "Ansel Ryburn", "Rickert Farmery", "Ernst Malcher" ],
     "countriesBanned" : [ "Nigeria", "Lithuania", "Burkina Faso" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
-  } ],
+  } ]
+}, {
+  "error" : null,
   "currentUser" : {
     "credentials" : {
       "name" : "Iancu",
@@ -516,8 +554,6 @@
       "country" : "Japan",
       "balance" : "0"
     },
-    "tokensCount" : 48,
-    "numFreePremiumMovies" : 15,
     "purchasedMovies" : [ {
       "name" : "Jason's Lyric",
       "year" : "1994",
@@ -526,7 +562,7 @@
       "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
       "countriesBanned" : [ "Romania", "China", "Finland" ],
       "numLikes" : 0,
-      "rating" : 0.00,
+      "rating" : 0.0,
       "numRatings" : 0
     } ],
     "watchedMovies" : [ {
@@ -537,15 +573,15 @@
       "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
       "countriesBanned" : [ "Romania", "China", "Finland" ],
       "numLikes" : 0,
-      "rating" : 0.00,
+      "rating" : 0.0,
       "numRatings" : 0
     } ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
+    "tokensCount" : 48,
+    "numFreePremiumMovies" : 15,
     "notifications" : [ ]
-  }
-}, {
-  "error" : null,
+  },
   "currentMoviesList" : [ {
     "name" : "Indiana Jones and the Temple of Doom",
     "year" : "2012",
@@ -554,9 +590,11 @@
     "actors" : [ "Samuel Murtell", "Ansel Ryburn", "Rickert Farmery", "Ernst Malcher" ],
     "countriesBanned" : [ "Nigeria", "Lithuania", "Burkina Faso" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
-  } ],
+  } ]
+}, {
+  "error" : null,
   "currentUser" : {
     "credentials" : {
       "name" : "Iancu",
@@ -565,8 +603,6 @@
       "country" : "Japan",
       "balance" : "0"
     },
-    "tokensCount" : 48,
-    "numFreePremiumMovies" : 15,
     "purchasedMovies" : [ {
       "name" : "Jason's Lyric",
       "year" : "1994",
@@ -575,7 +611,7 @@
       "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
       "countriesBanned" : [ "Romania", "China", "Finland" ],
       "numLikes" : 0,
-      "rating" : 0.00,
+      "rating" : 0.0,
       "numRatings" : 0
     } ],
     "watchedMovies" : [ {
@@ -586,15 +622,15 @@
       "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
       "countriesBanned" : [ "Romania", "China", "Finland" ],
       "numLikes" : 0,
-      "rating" : 0.00,
+      "rating" : 0.0,
       "numRatings" : 0
     } ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
+    "tokensCount" : 48,
+    "numFreePremiumMovies" : 15,
     "notifications" : [ ]
-  }
-}, {
-  "error" : null,
+  },
   "currentMoviesList" : [ {
     "name" : "Lord, Save Us from Your Followers",
     "year" : "1998",
@@ -603,7 +639,7 @@
     "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
     "countriesBanned" : [ "Russia", "Saudi Arabia", "Zimbabwe" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Take the Money and Run",
@@ -613,7 +649,7 @@
     "actors" : [ "Hailey Evequot", "Fenelia Maryott", "Gloriane Haughton", "Evvie Asbery" ],
     "countriesBanned" : [ "Indonesia", "China", "India" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Penelope",
@@ -623,7 +659,7 @@
     "actors" : [ "Elnore Neild", "Gay Cobbing", "Guntar Holton", "Merry Troni" ],
     "countriesBanned" : [ "Azerbaijan", "China", "India" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Kiwi!",
@@ -633,7 +669,7 @@
     "actors" : [ "Carleen Pidgeon", "Lois Gibling", "Colver Corss", "Mora Piotrkowski" ],
     "countriesBanned" : [ "Brazil", "China", "Russia" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Little Foxes, The",
@@ -643,7 +679,7 @@
     "actors" : [ "Coleen Verheijden", "Dean McCooke", "Melamie Griswaite", "Clementine Loding" ],
     "countriesBanned" : [ "Brazil", "Philippines", "Poland" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "The Empty Hours",
@@ -653,7 +689,7 @@
     "actors" : [ "Holly Sandbrook", "Phyllys Lindsell", "Bendick Bointon", "Dani Duigenan" ],
     "countriesBanned" : [ "Indonesia", "Brazil", "Uganda" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Jason's Lyric",
@@ -663,7 +699,7 @@
     "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
     "countriesBanned" : [ "Romania", "China", "Finland" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Comet in Moominland",
@@ -673,7 +709,7 @@
     "actors" : [ "Bertina Kemshell", "Marshall Bysshe", "Dexter Rickaert", "Zack Brandel" ],
     "countriesBanned" : [ "Brazil", "China", "Colombia" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Bag It",
@@ -683,7 +719,7 @@
     "actors" : [ "Rivy Aitken", "Farra Simnor", "Korie Sager", "Pauli Stapford" ],
     "countriesBanned" : [ "China", "Sweden", "Finland" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Shaolin Temple (Shao Lin si)",
@@ -693,7 +729,7 @@
     "actors" : [ "Dallon Audenis", "Anica Wrigley", "Perrine Baskwell", "Pammie Bowmaker" ],
     "countriesBanned" : [ "China", "Norway", "United States" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Belphecor: Curse of the Mummy (Belphégor - Le fantôme du Louvre)",
@@ -703,7 +739,7 @@
     "actors" : [ "Florella Snoday", "Obie Dowsing", "Lynnea Denington", "Chrystal Evreux" ],
     "countriesBanned" : [ "China", "Sweden", "Costa Rica" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Endangered Species",
@@ -713,7 +749,7 @@
     "actors" : [ "Morry Lunny", "Freda Werrett", "Jewel Gareisr", "Carine Cucinotta" ],
     "countriesBanned" : [ "France", "South Africa", "Indonesia" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Celluloid Closet, The",
@@ -723,7 +759,7 @@
     "actors" : [ "Betta MacAughtrie", "Miltie Vousden", "Rand Eliasson", "Calypso Jamson" ],
     "countriesBanned" : [ "Indonesia", "Argentina", "China" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "As You Like It",
@@ -733,7 +769,7 @@
     "actors" : [ "Maureene Elks", "Amber McGilbon", "Lora Doelle", "Blondelle Spyvye" ],
     "countriesBanned" : [ "China", "Venezuela", "India" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "The Well-Digger's Daughter",
@@ -743,7 +779,7 @@
     "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
     "countriesBanned" : [ "China", "South Africa", "India" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Mistress",
@@ -753,7 +789,7 @@
     "actors" : [ "Maighdiln Moroney", "Robinett Fennick", "Candice Hacquel", "Arlene Challoner" ],
     "countriesBanned" : [ "Greece", "Czech Republic", "Malaysia" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Indiana Jones and the Temple of Doom",
@@ -763,9 +799,11 @@
     "actors" : [ "Samuel Murtell", "Ansel Ryburn", "Rickert Farmery", "Ernst Malcher" ],
     "countriesBanned" : [ "Nigeria", "Lithuania", "Burkina Faso" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
-  } ],
+  } ]
+}, {
+  "error" : null,
   "currentUser" : {
     "credentials" : {
       "name" : "Iancu",
@@ -774,8 +812,6 @@
       "country" : "Japan",
       "balance" : "0"
     },
-    "tokensCount" : 48,
-    "numFreePremiumMovies" : 15,
     "purchasedMovies" : [ {
       "name" : "Jason's Lyric",
       "year" : "1994",
@@ -784,7 +820,7 @@
       "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
       "countriesBanned" : [ "Romania", "China", "Finland" ],
       "numLikes" : 0,
-      "rating" : 0.00,
+      "rating" : 0.0,
       "numRatings" : 0
     } ],
     "watchedMovies" : [ {
@@ -795,15 +831,15 @@
       "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
       "countriesBanned" : [ "Romania", "China", "Finland" ],
       "numLikes" : 0,
-      "rating" : 0.00,
+      "rating" : 0.0,
       "numRatings" : 0
     } ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
+    "tokensCount" : 48,
+    "numFreePremiumMovies" : 15,
     "notifications" : [ ]
-  }
-}, {
-  "error" : null,
+  },
   "currentMoviesList" : [ {
     "name" : "The Well-Digger's Daughter",
     "year" : "1994",
@@ -812,9 +848,11 @@
     "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
     "countriesBanned" : [ "China", "South Africa", "India" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
-  } ],
+  } ]
+}, {
+  "error" : null,
   "currentUser" : {
     "credentials" : {
       "name" : "Iancu",
@@ -823,8 +861,6 @@
       "country" : "Japan",
       "balance" : "0"
     },
-    "tokensCount" : 48,
-    "numFreePremiumMovies" : 15,
     "purchasedMovies" : [ {
       "name" : "Jason's Lyric",
       "year" : "1994",
@@ -833,7 +869,7 @@
       "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
       "countriesBanned" : [ "Romania", "China", "Finland" ],
       "numLikes" : 0,
-      "rating" : 0.00,
+      "rating" : 0.0,
       "numRatings" : 0
     } ],
     "watchedMovies" : [ {
@@ -844,15 +880,21 @@
       "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
       "countriesBanned" : [ "Romania", "China", "Finland" ],
       "numLikes" : 0,
-      "rating" : 0.00,
+      "rating" : 0.0,
       "numRatings" : 0
     } ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : [ ]
-  }
-}, {
-  "error" : null,
+    "tokensCount" : 48,
+    "numFreePremiumMovies" : 15,
+    "notifications" : [ {
+      "movieName" : "The Shawshank Redemption",
+      "message" : "ADD"
+    }, {
+      "movieName" : "Pulp Fictiom",
+      "message" : "ADD"
+    } ]
+  },
   "currentMoviesList" : [ {
     "name" : "Lord, Save Us from Your Followers",
     "year" : "1998",
@@ -861,7 +903,7 @@
     "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
     "countriesBanned" : [ "Russia", "Saudi Arabia", "Zimbabwe" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Take the Money and Run",
@@ -871,7 +913,7 @@
     "actors" : [ "Hailey Evequot", "Fenelia Maryott", "Gloriane Haughton", "Evvie Asbery" ],
     "countriesBanned" : [ "Indonesia", "China", "India" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Penelope",
@@ -881,7 +923,7 @@
     "actors" : [ "Elnore Neild", "Gay Cobbing", "Guntar Holton", "Merry Troni" ],
     "countriesBanned" : [ "Azerbaijan", "China", "India" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Kiwi!",
@@ -891,7 +933,7 @@
     "actors" : [ "Carleen Pidgeon", "Lois Gibling", "Colver Corss", "Mora Piotrkowski" ],
     "countriesBanned" : [ "Brazil", "China", "Russia" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Little Foxes, The",
@@ -901,7 +943,7 @@
     "actors" : [ "Coleen Verheijden", "Dean McCooke", "Melamie Griswaite", "Clementine Loding" ],
     "countriesBanned" : [ "Brazil", "Philippines", "Poland" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "The Empty Hours",
@@ -911,7 +953,7 @@
     "actors" : [ "Holly Sandbrook", "Phyllys Lindsell", "Bendick Bointon", "Dani Duigenan" ],
     "countriesBanned" : [ "Indonesia", "Brazil", "Uganda" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Jason's Lyric",
@@ -921,7 +963,7 @@
     "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
     "countriesBanned" : [ "Romania", "China", "Finland" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Comet in Moominland",
@@ -931,7 +973,7 @@
     "actors" : [ "Bertina Kemshell", "Marshall Bysshe", "Dexter Rickaert", "Zack Brandel" ],
     "countriesBanned" : [ "Brazil", "China", "Colombia" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Bag It",
@@ -941,7 +983,7 @@
     "actors" : [ "Rivy Aitken", "Farra Simnor", "Korie Sager", "Pauli Stapford" ],
     "countriesBanned" : [ "China", "Sweden", "Finland" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Shaolin Temple (Shao Lin si)",
@@ -951,7 +993,7 @@
     "actors" : [ "Dallon Audenis", "Anica Wrigley", "Perrine Baskwell", "Pammie Bowmaker" ],
     "countriesBanned" : [ "China", "Norway", "United States" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Belphecor: Curse of the Mummy (Belphégor - Le fantôme du Louvre)",
@@ -961,7 +1003,7 @@
     "actors" : [ "Florella Snoday", "Obie Dowsing", "Lynnea Denington", "Chrystal Evreux" ],
     "countriesBanned" : [ "China", "Sweden", "Costa Rica" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Endangered Species",
@@ -971,7 +1013,7 @@
     "actors" : [ "Morry Lunny", "Freda Werrett", "Jewel Gareisr", "Carine Cucinotta" ],
     "countriesBanned" : [ "France", "South Africa", "Indonesia" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Celluloid Closet, The",
@@ -981,7 +1023,7 @@
     "actors" : [ "Betta MacAughtrie", "Miltie Vousden", "Rand Eliasson", "Calypso Jamson" ],
     "countriesBanned" : [ "Indonesia", "Argentina", "China" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "As You Like It",
@@ -991,7 +1033,7 @@
     "actors" : [ "Maureene Elks", "Amber McGilbon", "Lora Doelle", "Blondelle Spyvye" ],
     "countriesBanned" : [ "China", "Venezuela", "India" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "The Well-Digger's Daughter",
@@ -1001,7 +1043,7 @@
     "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
     "countriesBanned" : [ "China", "South Africa", "India" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Mistress",
@@ -1011,7 +1053,7 @@
     "actors" : [ "Maighdiln Moroney", "Robinett Fennick", "Candice Hacquel", "Arlene Challoner" ],
     "countriesBanned" : [ "Greece", "Czech Republic", "Malaysia" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Indiana Jones and the Temple of Doom",
@@ -1021,7 +1063,7 @@
     "actors" : [ "Samuel Murtell", "Ansel Ryburn", "Rickert Farmery", "Ernst Malcher" ],
     "countriesBanned" : [ "Nigeria", "Lithuania", "Burkina Faso" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "The Shawshank Redemption",
@@ -1031,7 +1073,7 @@
     "actors" : [ "Tim Robbins", "Morgan Freeman", "Bob Gunton", "William Sadler" ],
     "countriesBanned" : [ "Azerbaijan", "China", "India" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "The Dark Knight",
@@ -1041,7 +1083,7 @@
     "actors" : [ "Morgan Freeman", "Christian Bale", "Heath Ledger", "Michael Caine" ],
     "countriesBanned" : [ "Azerbaijan", "China", "India" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
   }, {
     "name" : "Pulp Fictiom",
@@ -1051,49 +1093,7 @@
     "actors" : [ "John Travolta", "Uma Thurman", "Samuel L. Jackson", "Bruce Willis" ],
     "countriesBanned" : [ "Azerbaijan", "China", "India" ],
     "numLikes" : 0,
-    "rating" : 0.00,
+    "rating" : 0.0,
     "numRatings" : 0
-  } ],
-  "currentUser" : {
-    "credentials" : {
-      "name" : "Iancu",
-      "password" : "corega",
-      "accountType" : "standard",
-      "country" : "Japan",
-      "balance" : "0"
-    },
-    "tokensCount" : 48,
-    "numFreePremiumMovies" : 15,
-    "purchasedMovies" : [ {
-      "name" : "Jason's Lyric",
-      "year" : "1994",
-      "duration" : 103,
-      "genres" : [ "Drama", "Mystery", "Western" ],
-      "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
-      "countriesBanned" : [ "Romania", "China", "Finland" ],
-      "numLikes" : 0,
-      "rating" : 0.00,
-      "numRatings" : 0
-    } ],
-    "watchedMovies" : [ {
-      "name" : "Jason's Lyric",
-      "year" : "1994",
-      "duration" : 103,
-      "genres" : [ "Drama", "Mystery", "Western" ],
-      "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
-      "countriesBanned" : [ "Romania", "China", "Finland" ],
-      "numLikes" : 0,
-      "rating" : 0.00,
-      "numRatings" : 0
-    } ],
-    "likedMovies" : [ ],
-    "ratedMovies" : [ ],
-    "notifications" : [ {
-      "movieName" : "The Shawshank Redemption",
-      "message" : "ADD"
-    }, {
-      "movieName" : "Pulp Fictiom",
-      "message" : "ADD"
-    } ]
-  }
+  } ]
 } ]

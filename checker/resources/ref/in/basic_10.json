@@ -4,7 +4,7 @@
       "credentials": {
         "name": "Eduard",
         "password": "secret",
-        "accountType": "premium",
+        "accountType": "standard",
         "country": "India",
         "balance": "50"
       }
@@ -13,7 +13,7 @@
       "credentials": {
         "name": "Mihail",
         "password": "discret",
-        "accountType": "premium",
+        "accountType": "standard",
         "country": "China",
         "balance": "1337"
       }
@@ -22,7 +22,7 @@
       "credentials": {
         "name": "Iancu",
         "password": "corega",
-        "accountType": "premium",
+        "accountType": "standard",
         "country": "Japan",
         "balance": "50"
       }
@@ -31,7 +31,7 @@
       "credentials": {
         "name": "Geani",
         "password": "GNI",
-        "accountType": "premium",
+        "accountType": "standard",
         "country": "Russia",
         "balance": "50"
       }
@@ -40,7 +40,7 @@
       "credentials": {
         "name": "Ion",
         "password": "GLN",
-        "accountType": "premium",
+        "accountType": "standard",
         "country": "Brazil",
         "balance": "50"
       }
@@ -86,7 +86,8 @@
         "Mabel MacAless",
         "Iggy MacUchadair",
         "Arni Harrow",
-        "Reg Kelleher"
+        "Reg Kelleher",
+        "Camey Ingold"
       ]
     },
     {
@@ -107,7 +108,8 @@
         "Hailey Evequot",
         "Fenelia Maryott",
         "Gloriane Haughton",
-        "Evvie Asbery"
+        "Evvie Asbery",
+        "Camey Ingold"
       ]
     },
     {
@@ -191,7 +193,8 @@
         "Holly Sandbrook",
         "Phyllys Lindsell",
         "Bendick Bointon",
-        "Dani Duigenan"
+        "Dani Duigenan",
+        "Camey Ingold"
       ]
     },
     {
@@ -429,34 +432,15 @@
   "actions": [
     {
       "type": "change page",
-      "page": "register"
+      "page": "login"
     },
     {
       "type": "on page",
-      "page": "register",
-      "feature": "register",
+      "feature": "login",
       "credentials": {
-        "name": "Dorel",
-        "password": "ciucas",
-        "accountType": "standard",
-        "country": "Romania",
-        "balance": "3000"
+        "name": "Geani",
+        "password": "gni"
       }
-    },
-    {
-      "type": "change page",
-      "page": "upgrades"
-    },
-    {
-      "type": "on page",
-      "page": "upgrades",
-      "feature": "buy tokens",
-      "count": "1000"
-    },
-    {
-      "type": "on page",
-      "page": "upgrades",
-      "feature": "buy premium account"
     },
     {
       "type": "change page",
@@ -464,75 +448,77 @@
     },
     {
       "type": "change page",
-      "page": "see details",
-      "movie": "Take the Money and Run"
+      "page": "logout"
+    },
+    {
+      "type": "change page",
+      "page": "login"
     },
     {
       "type": "on page",
-      "feature": "purchase"
+      "feature": "login",
+      "credentials": {
+        "name": "Iancu",
+        "password": "corega"
+      }
+    },
+    {
+      "type": "change page",
+      "page": "movies"
     },
     {
       "type": "on page",
-      "feature": "watch"
-    },
-    {
-      "type": "on page",
-      "feature": "rate",
-      "rate": 2
-    },
-    {
-     "type" : "back"
+      "page": "movies",
+      "feature": "filter",
+      "filters": {
+        "contains": {
+          "actors": [
+            "Camey Ingold"
+          ]
+        }
+      }
     },
     {
       "type": "change page",
       "page": "see details",
-      "movie": "My Sassy Girl"
+      "movie": "Indiana Jones and the Temple of Doom"
     },
     {
       "type": "on page",
-      "feature": "purchase"
-    },
-    {
-      "type": "on page",
-      "feature": "watch"
-    },
-    {
-      "type": "on page",
-      "feature": "rate",
-      "rate": 2
-    },
-    {
-     "type" : "back"
+      "page": "movies",
+      "feature": "filter",
+      "filters": {
+        "contains": {
+          "genre": [
+            "Horror"
+          ]
+        }
+      }
     },
     {
       "type": "change page",
       "page": "see details",
-      "movie": "Penelope"
+      "movie": "Indiana Jones and the Temple of Doom"
     },
     {
       "type": "on page",
-      "feature": "purchase"
-    },
-    {
-      "type": "on page",
-      "feature": "watch"
-    },
-    {
-      "type": "on page",
-      "feature": "rate",
-      "rate": 2
-    },
-    {
-     "type" : "back"
+      "page": "movies",
+      "feature": "filter",
+      "filters": {
+        "contains": {
+          "genre": [
+            "Horror"
+          ],
+          "actors": [
+            "Camey Ingold"
+          ]
+        }
+      }
     },
     {
       "type": "change page",
       "page": "see details",
-      "movie": "Kiwi!"
-    },
-    {
-      "type": "on page",
-      "feature": "purchase"
+      "movie": "As You Like It"
     },
     {
       "type": "on page",
@@ -540,11 +526,22 @@
     },
     {
       "type": "on page",
-      "feature": "rate",
-      "rate": 2
+      "feature": "like"
     },
     {
-     "type" : "back"
+   "type":"back"
+    },
+    {
+      "type": "on page",
+      "page": "movies",
+      "feature": "filter",
+      "filters": {
+        "contains": {
+          "genre": [
+            "Action"
+          ]
+        }
+      }
     },
     {
       "type": "change page",
@@ -561,303 +558,40 @@
     },
     {
       "type": "on page",
-      "feature": "rate",
-      "rate": 2
-    },
-    {
-     "type" : "back"
-    },
-    {
-      "type": "change page",
-      "page": "see details",
-      "movie": "The Empty Hours"
-    },
-    {
-      "type": "on page",
-      "feature": "purchase"
-    },
-    {
-      "type": "on page",
-      "feature": "watch"
-    },
-    {
-      "type": "on page",
-      "feature": "rate",
-      "rate": 2
-    },
-    {
-     "type" : "back"
-    },
-    {
-      "type": "change page",
-      "page": "see details",
-      "movie": "Jason's Lyric"
-    },
-    {
-      "type": "on page",
-      "feature": "purchase"
-    },
-    {
-      "type": "on page",
-      "feature": "watch"
-    },
-    {
-      "type": "on page",
-      "feature": "rate",
-      "rate": 10
-    },
-    {
-     "type" : "back"
-    },
-    {
-      "type": "on page",
-      "feature": "buy tokens",
-      "count": "1000"
+      "feature": "like"
     },
     {
       "type": "back"
     },
     {
+      "type": "change page",
+      "page": "see details",
+      "movie": "Little Foxes, The"
+    },
+    {
+      "type": "on page",
+      "feature": "purchase"
+    },
+    {
+      "type": "on page",
+      "feature": "watch"
+    },
+    {
+      "type": "on page",
+      "feature": "like"
+    },
+    {
+      "type": "database",
+      "feature": "delete",
+      "deletedMovie": "Little Foxes, The"
+    },
+    {
       "type": "back"
     },
-    {"type": "change page",
-    "page":"movies"
-    },
     {
-      "type": "change page",
-      "page": "see details",
-      "movie": "Comet in Moominland"
-    },
-    {
-      "type": "on page",
-      "feature": "purchase"
-    },
-    {
-      "type": "on page",
-      "feature": "watch"
-    },
-    {
-      "type": "on page",
-      "feature": "rate",
-      "rate": 6
-    },
-    {
-     "type" : "back"
-    },
-    {
-      "type": "change page",
-      "page": "see details",
-      "movie": "Bag It"
-    },
-    {
-      "type": "on page",
-      "feature": "purchase"
-    },
-    {
-      "type": "on page",
-      "feature": "watch"
-    },
-    {
-      "type": "on page",
-      "feature": "rate",
-      "rate": 3
-    },
-    {
-     "type" : "back"
-    },
-    {
-      "type": "change page",
-      "page": "see details",
-      "movie": "Shaolin Temple (Shao Lin si)"
-    },
-    {
-      "type": "on page",
-      "feature": "purchase"
-    },
-    {
-      "type": "on page",
-      "feature": "watch"
-    },
-    {
-      "type": "on page",
-      "feature": "rate",
-      "rate": 5
-    },
-    {
-     "type" : "back"
-    },
-    {
-      "type": "change page",
-      "page": "see details",
-      "movie": "Belphecor: Curse of the Mummy (Belphégor - Le fantôme du Louvre)"
-    },
-    {
-      "type": "on page",
-      "feature": "purchase"
-    },
-    {
-      "type": "on page",
-      "feature": "watch"
-    },
-    {
-      "type": "on page",
-      "feature": "rate",
-      "rate": 3
-    },
-    {
-     "type" : "back"
-    },
-    {
-      "type": "change page",
-      "page": "see details",
-      "movie": "Endangered Species"
-    },
-    {
-      "type": "on page",
-      "feature": "purchase"
-    },
-    {
-      "type": "on page",
-      "feature": "watch"
-    },
-    {
-      "type": "on page",
-      "feature": "rate",
-      "rate": 2
-    },
-    {
-     "type" : "back"
-    },
-    {
-      "type": "change page",
-      "page": "see details",
-      "movie": "Celluloid Closet, The"
-    },
-    {
-      "type": "on page",
-      "feature": "purchase"
-    },
-    {
-      "type": "on page",
-      "feature": "watch"
-    },
-    {
-      "type": "on page",
-      "feature": "rate",
-      "rate": 1
-    },
-    {
-     "type" : "back"
-    },
-    {
-      "type": "change page",
-      "page": "see details",
-      "movie": "As You Like It"
-    },
-    {
-      "type": "on page",
-      "feature": "purchase"
-    },
-    {
-      "type": "on page",
-      "feature": "watch"
-    },
-    {
-      "type": "on page",
-      "feature": "rate",
-      "rate": 2
-    },
-    {
-     "type" : "back"
-    },
-    {
-      "type": "change page",
-      "page": "see details",
-      "movie": "The Well-Digger's Daughter"
-    },
-    {
-      "type": "on page",
-      "feature": "purchase"
-    },
-    {
-      "type": "on page",
-      "feature": "watch"
-    },
-    {
-      "type": "on page",
-      "feature": "rate",
-      "rate": 5
-    },
-    {
-     "type" : "back"
-    },
-    {
-      "type": "change page",
-      "page": "see details",
-      "movie": "Mistress"
-    },
-    {
-      "type": "on page",
-      "feature": "purchase"
-    },
-    {
-      "type": "on page",
-      "feature": "watch"
-    },
-    {
-      "type": "on page",
-      "feature": "rate",
-      "rate": 4
-    },
-    {
-     "type" : "back"
-    },
-    {
-      "type": "change page",
-      "page": "see details",
-      "movie": "Lord, Save Us from Your Followers"
-    },
-    {
-      "type": "on page",
-      "feature": "purchase"
-    },
-    {
-      "type": "on page",
-      "feature": "watch"
-    },
-    {
-      "type": "on page",
-      "feature": "rate",
-      "rate": 2
-    },
-    {
-     "type" : "back"
-    },
-    {
-      "type": "change page",
-      "page": "see details",
-      "movie": "Indiana Jones and the Temple of Doom"
-    },
-    {
-      "type": "on page",
-      "feature": "purchase"
-    },
-    {
-      "type": "on page",
-      "feature": "watch"
-    },
-    {
-     "type" : "back"
-    },
-    {
-      "type": "on page",
-      "page": "movies",
-      "feature": "filter",
-      "filters": {
-        "sort": {
-          "rating": "increasing"
-        }
-      }
+      "type": "database",
+      "feature": "delete",
+      "deletedMovie": "Nea Marin Miliardar"
     }
   ]
 }

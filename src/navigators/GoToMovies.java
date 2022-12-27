@@ -70,7 +70,8 @@ public class GoToMovies implements NavigateCommand {
         // reset actions done
         pageNow.setName(previousName);
         pageNow.setMovie(previousMovie);
-        pageNow.setMovieList(previousMovieList);
+        List<MovieInput> list = new ArrayList<>(previousMovieList);
+        pageNow.setMovieList(list);
 
         return previousName;
     }

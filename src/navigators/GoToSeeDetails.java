@@ -76,7 +76,7 @@ public class GoToSeeDetails implements NavigateCommand {
     public String undo() {
         // reset actions done
         pageNow.setName(previousName);
-        pageNow.setMovie(previousMovie);
+        pageNow.setMovie(new MovieInput(previousMovie));
         List<MovieInput> list = new ArrayList<>(pageNow.getMovieList());
         pageNow.setMovieList(list);
         return previousName;

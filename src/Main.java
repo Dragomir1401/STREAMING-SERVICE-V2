@@ -31,7 +31,7 @@ public final class Main {
         // initialise mapper
         ObjectMapper objectMapper = new ObjectMapper();
 
-        int i = 6;
+        int i = 4;
 
         // test filename and out filename
         String inputFile = "./checker/resources/in/basic_" + i + ".json";
@@ -40,7 +40,7 @@ public final class Main {
         file.getParentFile().mkdirs();
 
         // parse input for given test
-        Input programInput = objectMapper.readValue(new File(inputFile), Input.class);
+        Input programInput = objectMapper.readValue(new File(args[0]), Input.class);
 
         // initialise output
         Output programOutput = new Output();
@@ -54,7 +54,7 @@ public final class Main {
         // generate output and ignore subscribed genres for output
         ObjectWriter writer = objectMapper.writer(new DefaultPrettyPrinter());
         writer.writeValue(new File(outputFile), programOutput.getOutput());
-//        writer.writeValue(new File(args[1]), programOutput.getOutput());
+        writer.writeValue(new File(args[1]), programOutput.getOutput());
 
         // reset current user
         pageNow.getUser().setUser(null);

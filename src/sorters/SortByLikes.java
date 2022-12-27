@@ -11,8 +11,9 @@ import static constants.Constants.INCREASING;
 public class SortByLikes implements SortMovies {
     /**
      * sorts by duration
-     * @param movies  movies list
-     * @param parameter  increasing/decreasing
+     *
+     * @param movies    movies list
+     * @param parameter increasing/decreasing
      */
     @Override
     public void run(final List<MovieInput> movies, final String parameter) {
@@ -21,8 +22,10 @@ public class SortByLikes implements SortMovies {
             movies.sort(Comparator.comparingInt(MovieInput::getNumLikes));
             return;
         }
+
         if (parameter.equals(DECREASING)) {
-            movies.sort(Comparator.comparingInt(MovieInput::getNumLikes).reversed());
+            movies.sort((o1, o2) -> o2.getNumLikes() - o1.getNumLikes());
         }
+
     }
 }

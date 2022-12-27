@@ -15,16 +15,12 @@ import static constants.Constants.*;
 public class GoToLogout implements NavigateCommand {
     private final PageNow pageNow;
     private final Output output;
-    private MovieInput previousMovie;
-    private List<MovieInput> previousMovieList;
     private String previousName;
     private UserInput previousUser;
 
     public GoToLogout(PageNow pageNow, Output output) {
         this.pageNow = pageNow;
         this.output = output;
-        this.previousMovie = new MovieInput();
-        this.previousMovieList = new ArrayList<>();
         this.previousName = null;
     }
 
@@ -36,12 +32,6 @@ public class GoToLogout implements NavigateCommand {
         if (pageNow.getUser().getUser() != null) {
             // save previous state for undo
             previousName = pageNow.getName();
-            if (pageNow.getMovie() != null)
-                previousMovie = new MovieInput(pageNow.getMovie());
-            previousMovieList = new ArrayList<>();
-            if (pageNow.getMovieList() != null)
-                previousMovieList.addAll(pageNow.getMovieList());
-            previousUser = new UserInput(pageNow.getUser().getUser());
 
             // execute change to log out page
             pageNow.setName(HOMEPAGE);

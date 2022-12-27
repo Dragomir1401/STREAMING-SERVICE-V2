@@ -302,6 +302,12 @@ public class MovieCommands {
             if (index >= 0) {
                 pageNow.getUser().getUser().getLikedMovies().set(index, new MovieInput(movie));
             }
+
+            index = findMovieIndex(pageNow.getUser().getUser().getRatedMovies(), movie.getName());
+            if (index >= 0) {
+                pageNow.getUser().getUser().getRatedMovies().set(index, new MovieInput(movie));
+            }
+
         } else if (rateOrLike.equals(RATE)) {
             index = findMovieIndex(pageNow.getUser().getUser().getRatedMovies(), movie.getName());
             if (index >= 0) {

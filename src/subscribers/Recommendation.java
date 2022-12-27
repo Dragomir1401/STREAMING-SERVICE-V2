@@ -31,6 +31,7 @@ public class Recommendation {
                 RecommendationElement recommendationElement = findRecommendation(likedGenres, genre);
                 if (recommendationElement == null) {
                     RecommendationElement newElement = new RecommendationElement(genre);
+                    newElement.increaseLikeCount();
                     likedGenres.add(newElement);
                 } else {
                     recommendationElement.increaseLikeCount();
@@ -42,16 +43,31 @@ public class Recommendation {
         SortRecommendationsByLikes sort = new SortRecommendationsByLikes();
         sort.run(likedGenres, DECREASING);
 
+        // see if database is uniform in number of likes
         List<MovieInput> databaseMovies = new ArrayList<>(input.getMovies());
+        boolean sameNumLikes = true;
+        for (int i = 0; i < databaseMovies.size() - 1; i++) {
+            for (int j = i + 1; j < databaseMovies.size(); j++) {
+                if (databaseMovies.get(i).getNumLikes() != databaseMovies.get(j).getNumLikes()) {
+                    sameNumLikes = false;
+                    break;
+                }
+            }
+        }
+
 
         // sort database movies decreasingly
-        SortByLikes sortByLikes = new SortByLikes();
-        sortByLikes.run(databaseMovies, DECREASING);
+        if (!sameNumLikes) {
+            SortByLikes sortByLikes = new SortByLikes();
+            sortByLikes.run(databaseMovies, DECREASING);
+        }
 
+
+        // add recommendation notification
         boolean doneRecommending = false;
         for (RecommendationElement recommendationElement : likedGenres) {
             for (MovieInput movie : databaseMovies) {
-                if (!user.getWatchedMovies().contains(movie)
+                if (!containsMovie(user.getWatchedMovies(), movie)
                         && movie.getGenres().contains(recommendationElement.getGenre()) && !doneRecommending) {
                     user.getNotifications().add(new NotificationInput(movie.getName(), RECOMMENDATION));
                     output.getOutput().add(new CommandOutput(user));
@@ -73,5 +89,14 @@ public class Recommendation {
             }
         }
         return null;
+    }
+
+    private static boolean containsMovie(List<MovieInput> list, MovieInput movie) {
+        for (MovieInput movieInput : list) {
+            if (movieInput.getName().equals(movie.getName())) {
+                return true;
+            }
+        }
+        return false;
     }
 }

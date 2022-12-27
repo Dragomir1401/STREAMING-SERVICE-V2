@@ -8,7 +8,7 @@ import output.Output;
 import java.util.ArrayList;
 import java.util.List;
 
-import static constants.Constants.UPGRADES;
+import static constants.Constants.*;
 
 public class GoToUpgrades implements NavigateCommand {
     private final PageNow pageNow;
@@ -30,7 +30,7 @@ public class GoToUpgrades implements NavigateCommand {
      * execute named navigation command
      */
     @Override
-    public void execute() {
+    public String execute() {
 
         if (pageNow.getUser().getUser() != null) {
             // save previous state for undo
@@ -46,8 +46,11 @@ public class GoToUpgrades implements NavigateCommand {
             pageNow.setName(UPGRADES);
             pageNow.setMovie(null);
             pageNow.setMovieList(null);
+
+            return SUCCESS;
         } else {
             output.getOutput().add(new CommandOutput());
+            return FAILURE;
         }
 
     }

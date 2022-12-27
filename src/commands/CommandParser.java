@@ -6,7 +6,8 @@ import input.Input;
 import momentary.PageNow;
 import navigators.Reciever;
 import output.Output;
-import subscribe.Subscribe;
+import subscribers.Recommendation;
+import subscribers.Subscribe;
 
 import static constants.Constants.*;
 
@@ -37,5 +38,8 @@ public final class CommandParser {
                 default -> System.out.println(DEFAULT_COMMAND);
             }
         }
+        // generate final recommendation if there is a current user logged
+        if (pageNow.getUser().getUser() != null)
+            Recommendation.generateRecommendations(input, pageNow, output);
     }
 }

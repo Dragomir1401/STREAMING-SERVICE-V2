@@ -9,7 +9,8 @@ import output.Output;
 
 import java.util.ArrayList;
 import java.util.List;
-import static constants.Constants.MOVIES;
+
+import static constants.Constants.*;
 
 public class GoToMovies implements NavigateCommand {
     private final Input input;
@@ -32,7 +33,7 @@ public class GoToMovies implements NavigateCommand {
      * execute named navigation command
      */
     @Override
-    public void execute() {
+    public String execute() {
         if (pageNow.getUser().getUser() != null) {
             // save previous state for undo
             previousName = pageNow.getName();
@@ -50,8 +51,11 @@ public class GoToMovies implements NavigateCommand {
             pageNow.setMovieList(filterByCountry.filter(input.getMovies(), pageNow.getUser().getUser()));
             output.getOutput().add(new CommandOutput(pageNow.getMovieList(),
                     pageNow.getUser().getUser()));
+
+            return SUCCESS;
         } else {
             output.getOutput().add(new CommandOutput());
+            return FAILURE;
         }
 
     }

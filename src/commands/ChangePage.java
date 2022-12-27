@@ -1,6 +1,7 @@
 package commands;
 
 import input.ActionInput;
+import input.MovieInput;
 import momentary.PageNow;
 import navigators.*;
 import output.CommandOutput;
@@ -37,10 +38,18 @@ public final class ChangePage {
 
         String previousPage = reciever.undo();
 
-        // check for empty stack of actions to undo
-        if (previousPage.equals(POOR_UNDO)) {
-            output.getOutput().add(new CommandOutput());
+        if (previousPage != null) {
+            if (previousPage.equals(MOVIES)) {
+                output.getOutput().add(new CommandOutput(pageNow.getMovieList(),
+                        pageNow.getUser().getUser()));
+            }
+
+            // check for empty stack of actions to undo
+            if (previousPage.equals(EMPTY_COMMAND_STACK)) {
+                output.getOutput().add(new CommandOutput());
+            }
         }
+
     }
 }
 

@@ -4,7 +4,7 @@ public interface NavigateCommand {
     /**
      * execute named navigation command
      */
-    void execute();
+    String execute();
 
     /**
      * undo named navigation command

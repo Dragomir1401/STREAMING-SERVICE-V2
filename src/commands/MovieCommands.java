@@ -10,7 +10,8 @@ import output.CommandOutput;
 import output.Output;
 import java.text.DecimalFormat;
 import java.util.List;
-import static constants.Constants.MAX_RATE;
+
+import static constants.Constants.*;
 
 public class MovieCommands {
     private static MovieCommands instance;
@@ -214,7 +215,7 @@ public class MovieCommands {
         pageNow.getUser().getUser().getLikedMovies().add(new MovieInput(movie));
 
         // modify movie in all its appearances
-        modifyAppearances(input, pageNow, movie, "rate");
+        modifyAppearances(input, pageNow, movie, RATE);
 
         // create output
         output.getOutput().add(new CommandOutput(new MovieInput(movie),
@@ -225,7 +226,7 @@ public class MovieCommands {
      * rate a movie action
      * @param input - input structure
      * @param pageNow - current page
-     * @param output - output strcture
+     * @param output - output structure
      * @param actionInput - action input
      */
     public void rateMovie(final Input input, final PageNow pageNow, final Output output,
@@ -270,7 +271,7 @@ public class MovieCommands {
         movie.setRating(rating1);
 
         // modify all appearances
-        modifyAppearances(input, pageNow, movie, "like");
+        modifyAppearances(input, pageNow, movie, LIKE);
 
         // create output
         output.getOutput().add(new CommandOutput(new MovieInput(movie),
@@ -296,12 +297,12 @@ public class MovieCommands {
         if (index >= 0) {
             pageNow.getUser().getUser().getWatchedMovies().set(index, new MovieInput(movie));
         }
-        if (rateOrLike.equals("like")) {
+        if (rateOrLike.equals(LIKE)) {
             index = findMovieIndex(pageNow.getUser().getUser().getLikedMovies(), movie.getName());
             if (index >= 0) {
                 pageNow.getUser().getUser().getLikedMovies().set(index, new MovieInput(movie));
             }
-        } else if (rateOrLike.equals("rate")) {
+        } else if (rateOrLike.equals(RATE)) {
             index = findMovieIndex(pageNow.getUser().getUser().getRatedMovies(), movie.getName());
             if (index >= 0) {
                 pageNow.getUser().getUser().getRatedMovies().set(index, new MovieInput(movie));

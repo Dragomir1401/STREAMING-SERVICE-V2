@@ -1,4 +1,4 @@
-package subscribe;
+package subscribers;
 
 import input.ActionInput;
 import momentary.PageNow;

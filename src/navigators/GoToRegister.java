@@ -8,8 +8,7 @@ import output.Output;
 import java.util.ArrayList;
 import java.util.List;
 
-import static constants.Constants.HOMEPAGE;
-import static constants.Constants.REGISTER;
+import static constants.Constants.*;
 
 public class GoToRegister implements NavigateCommand {
     private final PageNow pageNow;
@@ -32,7 +31,7 @@ public class GoToRegister implements NavigateCommand {
      * execute named navigation command
      */
     @Override
-    public void execute() {
+    public String execute() {
         if (pageNow.getName().equals(HOMEPAGE) && pageNow.getUser().getUser() == null) {
 
             // save previous state for undo
@@ -47,8 +46,11 @@ public class GoToRegister implements NavigateCommand {
             pageNow.setName(REGISTER);
             pageNow.setMovie(null);
             pageNow.setMovieList(null);
+
+            return SUCCESS;
         } else {
             output.getOutput().add(new CommandOutput());
+            return FAILURE;
         }
     }
 
@@ -60,9 +62,7 @@ public class GoToRegister implements NavigateCommand {
     @Override
     public String undo() {
         // reset actions done
-        pageNow.setName(previousName);
-        pageNow.setMovie(previousMovie);
-        pageNow.setMovieList(previousMovieList);
+        output.getOutput().add(new CommandOutput());
 
         return previousName;
     }

@@ -9,8 +9,7 @@ import output.Output;
 import java.util.ArrayList;
 import java.util.List;
 
-import static constants.Constants.MOVIES;
-import static constants.Constants.SEE_DETAILS;
+import static constants.Constants.*;
 
 public class GoToSeeDetails implements NavigateCommand {
     private final ActionInput action;
@@ -35,7 +34,7 @@ public class GoToSeeDetails implements NavigateCommand {
      * execute named navigation command
      */
     @Override
-    public void execute() {
+    public String execute() {
         if (pageNow.getName().equals(MOVIES)
                 && pageNow.getMoviesCommands().findMovieInstance(pageNow.getMovieList(),
                 action.getMovie()) != null) {
@@ -45,7 +44,7 @@ public class GoToSeeDetails implements NavigateCommand {
             if (pageNow.getMovie() != null)
                 previousMovie = new MovieInput(pageNow.getMovie());
             previousMovieList = new ArrayList<>();
-            if (pageNow.getMovieList() != null)
+            if (!pageNow.getMovieList().isEmpty())
                 previousMovieList.addAll(pageNow.getMovieList());
 
 
@@ -58,8 +57,12 @@ public class GoToSeeDetails implements NavigateCommand {
                             pageNow.getMovieList(), action.getMovie()), output,
                     pageNow.getUser().getUser(), pageNow);
 
+
+            return SUCCESS;
+
         } else {
             output.getOutput().add(new CommandOutput());
+            return FAILURE;
         }
 
     }
@@ -74,8 +77,8 @@ public class GoToSeeDetails implements NavigateCommand {
         // reset actions done
         pageNow.setName(previousName);
         pageNow.setMovie(previousMovie);
-        pageNow.setMovieList(previousMovieList);
-
+        List<MovieInput> list = new ArrayList<>(pageNow.getMovieList());
+        pageNow.setMovieList(list);
         return previousName;
     }
 }

@@ -6,8 +6,8 @@ import output.CommandOutput;
 import output.Output;
 import java.util.ArrayList;
 import java.util.List;
-import static constants.Constants.LOGIN;
-import static constants.Constants.HOMEPAGE;
+
+import static constants.Constants.*;
 
 
 public class GoToLogin implements NavigateCommand {
@@ -29,9 +29,10 @@ public class GoToLogin implements NavigateCommand {
      * execute named navigation command
      */
     @Override
-    public void execute() {
+    public String execute() {
         if (!pageNow.getName().equals(HOMEPAGE) || pageNow.getUser().getUser() != null) {
             output.getOutput().add(new CommandOutput());
+            return FAILURE;
         } else {
 
             // save previous state for undo
@@ -46,6 +47,7 @@ public class GoToLogin implements NavigateCommand {
             pageNow.setName(LOGIN);
             pageNow.setMovie(null);
             pageNow.setMovieList(null);
+            return SUCCESS;
         }
     }
 

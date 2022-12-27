@@ -31,6 +31,11 @@ public class CommandOutput {
         this.moviesList = List.of(new MovieInput(movie));
     }
 
+    public CommandOutput(final UserInput user) {
+        this.user = new UserInput(user);
+        this.moviesList = null;
+    }
+
 
     /**
      * getter for error

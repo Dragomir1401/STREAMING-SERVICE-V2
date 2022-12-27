@@ -1,10 +1,5 @@
 package constants;
 
-import momentary.PageNow;
-
-import java.security.PublicKey;
-import java.util.PropertyResourceBundle;
-
 public final class Constants {
     public static final int MAX_RATE = 5;
     public static final int PREMIUM_COST = 10;
@@ -39,7 +34,13 @@ public final class Constants {
     public static final String DELETE_MESSAGE = "DELETE";
     public static final String PREMIUM = "premium";
     public static final String STANDARD = "standard";
-
+    public static final String FAILURE = "failure";
+    public static final String SUCCESS = "success";
+    public static final String EMPTY_COMMAND_STACK = "empty";
+    public static final String DECREASING = "decreasing";
+    public static final String INCREASING = "increasing";
+    public static final String RECOMMENDATION = "Recommendation";
+    public static final String NO_RECOMMENDATION = "No recommendation";
 
     private Constants() {
     }

@@ -4,11 +4,11 @@ import input.MovieInput;
 
 import java.util.List;
 
-public interface Sort {
+public interface SortMovies {
     /**
      * runs sorters
-     * @param movies - movies list
-     * @param parameter - increasing/decreasing
+     * @param movies  movies list
+     * @param parameter  increasing/decreasing
      */
     void run(List<MovieInput> movies, String parameter);
 }

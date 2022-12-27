@@ -8,7 +8,7 @@ import java.util.List;
 import static constants.Constants.DECREASING;
 import static constants.Constants.INCREASING;
 
-public class SortByDuration implements SortMovies {
+public class SortByLikes implements SortMovies {
     /**
      * sorts by duration
      * @param movies  movies list
@@ -18,11 +18,11 @@ public class SortByDuration implements SortMovies {
     public void run(final List<MovieInput> movies, final String parameter) {
 
         if (parameter.equals(INCREASING)) {
-            movies.sort(Comparator.comparingInt(MovieInput::getDuration));
+            movies.sort(Comparator.comparingInt(MovieInput::getNumLikes));
             return;
         }
         if (parameter.equals(DECREASING)) {
-            movies.sort(Comparator.comparingInt(MovieInput::getDuration).reversed());
+            movies.sort(Comparator.comparingInt(MovieInput::getNumLikes).reversed());
         }
     }
 }

@@ -156,6 +156,22 @@ solution tree by splitting into commands.
     has to be undone it simply pops the action from the exectued stack and calls
     its undo method.
 
+    * Invoker - the commander
+    - call actions on commands (invoke methods provided by objects of type Command)
+    maintains a list of all orders applied to the ordered objects.
+
+    * Receiver - the commanded
+    - is the called class
+    - it contains the actual implementation of what is intended to be executed
+    
+    * NavigationCommand
+    - objects for representing commands implement this 
+        interface/extend it if it is an abstract class
+
+    * Concrete command - we mean its implementations/subclasses - ChangePage class
+    - contains methods with suggestive names for executing the command action (next(), back())
+    - their implementations contain the call to the Receiver class.
+
 
 
 There are also sorters for lists of movies and lists of recommendations 

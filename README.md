@@ -225,10 +225,15 @@ classes and interfaces could have made the implementation easier and more facile
 Resources:
 
 https://ocw.cs.pub.ro/courses/poo-ca-cd/teme/proiect/etapa1
+
 https://ocw.cs.pub.ro/courses/poo-ca-cd/laboratoare/design-patterns
+
 https://refactoring.guru/design-patterns/factory-method
+
 https://jsondiff.com/
+
 https://ocw.cs.pub.ro/courses/poo-ca-cd/administrativ/barem_teme
+
 https://ocw.cs.pub.ro/courses/poo-ca-cd/teme/proiect/etapa2
 
 

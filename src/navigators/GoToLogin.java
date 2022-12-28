@@ -1,21 +1,20 @@
 package navigators;
 
-import input.MovieInput;
 import momentary.PageNow;
 import output.CommandOutput;
 import output.Output;
-import java.util.ArrayList;
-import java.util.List;
 
-import static constants.Constants.*;
-
+import static constants.Constants.FAILURE;
+import static constants.Constants.LOGIN;
+import static constants.Constants.HOMEPAGE;
+import static constants.Constants.SUCCESS;
 
 public class GoToLogin implements NavigateCommand {
     private final PageNow pageNow;
     private final Output output;
     private String previousName;
 
-    public GoToLogin(PageNow pageNow, Output output) {
+    public GoToLogin(final PageNow pageNow, final Output output) {
         this.pageNow = pageNow;
         this.output = output;
         this.previousName = null;

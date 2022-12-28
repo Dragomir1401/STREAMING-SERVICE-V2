@@ -5,11 +5,13 @@ import input.MovieInput;
 import momentary.PageNow;
 import output.CommandOutput;
 import output.Output;
-
 import java.util.ArrayList;
 import java.util.List;
+import static constants.Constants.SUCCESS;
+import static constants.Constants.FAILURE;
+import static constants.Constants.MOVIES;
+import static constants.Constants.SEE_DETAILS;
 
-import static constants.Constants.*;
 
 public class GoToSeeDetails implements NavigateCommand {
     private final ActionInput action;
@@ -19,7 +21,7 @@ public class GoToSeeDetails implements NavigateCommand {
     private List<MovieInput> previousMovieList;
     private String previousName;
 
-    public GoToSeeDetails(ActionInput action, PageNow pageNow, Output output) {
+    public GoToSeeDetails(final ActionInput action, final PageNow pageNow, final Output output) {
         this.action = action;
         this.pageNow = pageNow;
         this.output = output;
@@ -41,20 +43,18 @@ public class GoToSeeDetails implements NavigateCommand {
 
             // save previous state for undo
             previousName = pageNow.getName();
-            if (pageNow.getMovie() != null)
+            if (pageNow.getMovie() != null) {
                 previousMovie = new MovieInput(pageNow.getMovie());
-            previousMovieList = new ArrayList<>();
-            if (!pageNow.getMovieList().isEmpty())
-                previousMovieList.addAll(pageNow.getMovieList());
-
+            }
+            previousMovieList = pageNow.getMovieList();
 
             // move to see details page
             pageNow.setName(SEE_DETAILS);
             pageNow.setMovie(new MovieInput(pageNow.getMoviesCommands().findMovieInstance(
                     pageNow.getMovieList(), action.getMovie())));
 
-            pageNow.getMoviesCommands().getMovieDetails(pageNow.getMoviesCommands().findMovieInstance(
-                            pageNow.getMovieList(), action.getMovie()), output,
+            pageNow.getMoviesCommands().getMovieDetails(pageNow.getMoviesCommands().
+                            findMovieInstance(pageNow.getMovieList(), action.getMovie()), output,
                     pageNow.getUser().getUser(), pageNow);
 
 
@@ -77,8 +77,7 @@ public class GoToSeeDetails implements NavigateCommand {
         // reset actions done
         pageNow.setName(previousName);
         pageNow.setMovie(new MovieInput(previousMovie));
-        List<MovieInput> list = new ArrayList<>(pageNow.getMovieList());
-        pageNow.setMovieList(list);
+        pageNow.setMovieList(previousMovieList);
         return previousName;
     }
 }

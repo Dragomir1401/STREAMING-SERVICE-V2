@@ -11,7 +11,13 @@ import output.Output;
 import java.text.DecimalFormat;
 import java.util.List;
 
-import static constants.Constants.*;
+import static constants.Constants.UPGRADES;
+import static constants.Constants.SEE_DETAILS;
+import static constants.Constants.PREMIUM;
+import static constants.Constants.STANDARD;
+import static constants.Constants.RATE;
+import static constants.Constants.MAX_RATE;
+import static constants.Constants.LIKE;
 
 public class MovieCommands {
     private static MovieCommands instance;
@@ -89,7 +95,7 @@ public class MovieCommands {
                               final ActionInput actionInput) {
         // check to see if user has already purchased movie
         for (MovieInput movieInput : pageNow.getUser().getUser().getPurchasedMovies()) {
-            if (movieInput.getName().equals(actionInput.getMovie())) {
+            if (movieInput.getName().equals(pageNow.getMovie().getName())) {
                 output.getOutput().add(new CommandOutput());
                 return;
             }
@@ -97,15 +103,16 @@ public class MovieCommands {
 
         // initialise filter
         FilterByCountry filterByCountry = new FilterByCountry();
+
         // get permitted movies in that country
         List<MovieInput> permittedMovies = filterByCountry.filter(input.getMovies(),
                 pageNow.getUser().getUser());
 
         // find movie instance
         MovieInput movie = null;
-        if (pageNow.getName().equals("upgrades")) {
+        if (pageNow.getName().equals(UPGRADES)) {
             movie = findMovieInstance(permittedMovies, actionInput.getMovie());
-        } else if (pageNow.getName().equals("see details")) {
+        } else if (pageNow.getName().equals(SEE_DETAILS)) {
             movie = findMovieInstance(permittedMovies, pageNow.getMovie().getName());
         }
 
@@ -116,24 +123,27 @@ public class MovieCommands {
         }
 
         // case for premium account take from free movies
-        if (pageNow.getUser().getUser().getCredentials().getAccountType().equals("premium")) {
+        if (pageNow.getUser().getUser().getCredentials().getAccountType().equals(PREMIUM)) {
             // check to see if user has free movies left
             if (pageNow.getUser().getUser().getNumFreePremiumMovies() > 0) {
                 pageNow.getUser().getUser().setNumFreePremiumMovies(
                         pageNow.getUser().getUser().getNumFreePremiumMovies() - 1);
+
                 // add movie to purchased list
                 pageNow.getUser().getUser().getPurchasedMovies().add(new MovieInput(movie));
+
                 // create output
                 output.getOutput().add(new CommandOutput(new MovieInput(movie),
                         pageNow.getUser().getUser()));
                 return;
             }
+
             // else purchase as normal user
             purchaseMovieStandardAccount(pageNow, output, movie);
             return;
         }
         // case for standard user
-        if (pageNow.getUser().getUser().getCredentials().getAccountType().equals("standard")) {
+        if (pageNow.getUser().getUser().getCredentials().getAccountType().equals(STANDARD)) {
             purchaseMovieStandardAccount(pageNow, output, movie);
         }
     }
@@ -172,10 +182,10 @@ public class MovieCommands {
                            final ActionInput actionInput) {
         // check to see if movie is in purchased movies
         MovieInput movieInstance = null;
-        if (pageNow.getName().equals("upgrades")) {
+        if (pageNow.getName().equals(UPGRADES)) {
             movieInstance = findMovieInstance(pageNow.getUser().getUser().getPurchasedMovies(),
                     actionInput.getMovie());
-        } else if (pageNow.getName().equals("see details")) {
+        } else if (pageNow.getName().equals(SEE_DETAILS)) {
             movieInstance = findMovieInstance(pageNow.getUser().getUser().getPurchasedMovies(),
                     pageNow.getMovie().getName());
         }
@@ -186,8 +196,21 @@ public class MovieCommands {
         }
         MovieInput movie = new MovieInput(movieInstance);
 
-        // watch movie action
-        pageNow.getUser().getUser().getWatchedMovies().add(new MovieInput(movie));
+        // watch movie action only adds when movie is not already in watched list
+        boolean movieAlreadyWatched = false;
+        for (MovieInput movieInput : pageNow.getUser().getUser().getWatchedMovies()) {
+            if (movieInput.getName().equals(movie.getName())) {
+                movieAlreadyWatched = true;
+                break;
+            }
+        }
+
+        if (!movieAlreadyWatched) {
+            pageNow.getUser().getUser().getWatchedMovies().add(new MovieInput(movie));
+        } else {
+            return;
+        }
+
         // create output
         output.getOutput().add(new CommandOutput(new MovieInput(movie),
                 pageNow.getUser().getUser()));
@@ -212,6 +235,8 @@ public class MovieCommands {
 
         // like movie action
         movie.increaseLikes();
+
+        // add movie to liked list
         pageNow.getUser().getUser().getLikedMovies().add(new MovieInput(movie));
 
         // modify movie in all its appearances
@@ -240,15 +265,28 @@ public class MovieCommands {
         }
         MovieInput movie = new MovieInput(movieInstance);
 
+        boolean movieAlreadyRated = false;
+
+        // check to see if user already liked this movie and wants to change rating
+        for (MovieInput movieInput : pageNow.getUser().getUser().getRatedMovies()) {
+            if (movieInput.getName().equals(movie.getName())) {
+                movieAlreadyRated = true;
+                break;
+            }
+        }
+
         // keep user rating in user rated movie class
         movie.setRating(actionInput.getRate());
 
-        // add movie to rated movies for user
-        movie.increaseNumRatings();
-        pageNow.getUser().getUser().getRatedMovies().add(new MovieInput(movie));
+        double rating;
+
+        // add movie to rated movies for user if not rated already
+        if (!movieAlreadyRated) {
+            movie.increaseNumRatings();
+            pageNow.getUser().getUser().getRatedMovies().add(new MovieInput(movie));
+        }
 
         // create rating for movie
-        double rating;
 
         double sum = 0.00;
         for (UserInput userInput : input.getUsers()) {
@@ -256,11 +294,20 @@ public class MovieCommands {
             MovieInput ratedMovie = findMovieInstance(userInput.getRatedMovies(),
                     movie.getName());
 
-            // create sum for rating
-            if (ratedMovie != null) {
+            if (movieAlreadyRated) {
+                sum -= ratedMovie.getRating() / movie.getNumRatings();
+                movieAlreadyRated = false;
+            }
+
+            if (userInput.getCredentials().getName().equals(
+                    pageNow.getUser().getUser().getCredentials().getName())) {
+                sum += actionInput.getRate();
+            } else if (ratedMovie != null) {
                 sum += ratedMovie.getRating();
             }
         }
+
+
         // calculate rating
         rating = sum / (double) movie.getNumRatings();
 
@@ -293,10 +340,12 @@ public class MovieCommands {
         if (index >= 0) {
             pageNow.getUser().getUser().getPurchasedMovies().set(index, new MovieInput(movie));
         }
+
         index = findMovieIndex(pageNow.getUser().getUser().getWatchedMovies(), movie.getName());
         if (index >= 0) {
             pageNow.getUser().getUser().getWatchedMovies().set(index, new MovieInput(movie));
         }
+
         if (rateOrLike.equals(LIKE)) {
             index = findMovieIndex(pageNow.getUser().getUser().getLikedMovies(), movie.getName());
             if (index >= 0) {
@@ -314,6 +363,7 @@ public class MovieCommands {
                 pageNow.getUser().getUser().getRatedMovies().set(index, new MovieInput(movie));
             }
         }
+
         index = findMovieIndex(pageNow.getMovieList(), movie.getName());
         if (index >= 0) {
             pageNow.getMovieList().set(index, new MovieInput(movie));
@@ -333,10 +383,10 @@ public class MovieCommands {
     public MovieInput findMovieInstanceForEdgeCase(final PageNow pageNow,
                                                    final ActionInput actionInput) {
         MovieInput movieInstance = null;
-        if (pageNow.getName().equals("upgrades")) {
+        if (pageNow.getName().equals(UPGRADES)) {
             movieInstance = findMovieInstance(pageNow.getUser().getUser().getWatchedMovies(),
                     actionInput.getMovie());
-        } else if (pageNow.getName().equals("see details")) {
+        } else if (pageNow.getName().equals(SEE_DETAILS)) {
             movieInstance = findMovieInstance(pageNow.getUser().getUser().getWatchedMovies(),
                     pageNow.getMovie().getName());
         }

@@ -1,17 +1,30 @@
 package database;
 
-import input.*;
+import input.MovieInput;
+import input.Input;
+import input.ActionInput;
+import input.UserInput;
+import input.NotificationInput;
 import output.CommandOutput;
 import output.Output;
+import static constants.Constants.DELETE_MESSAGE;
+import static constants.Constants.PREMIUM;
+import static constants.Constants.STANDARD;
 
-import static constants.Constants.*;
 
-public class Delete {
-    public Delete() {
+public final class Delete {
+    private Delete() {
 
     }
 
-    public static void deleteMovie(Input input, Output output, ActionInput action) {
+    /**
+     * delets movie from database
+     * @param input  input structure
+     * @param output  output structure
+     * @param action  action input
+     */
+    public static void deleteMovie(final Input input, final Output output,
+                                   final ActionInput action) {
         // check to see if movie exists in database
         boolean movieExists = false;
         for (MovieInput movie : input.getMovies()) {
@@ -34,13 +47,18 @@ public class Delete {
             for (MovieInput movie : user.getPurchasedMovies()) {
                 if (movie.getName().equals(action.getDeletedMovie())) {
                     // notify the deletion to the user
-                    user.getNotifications().add(new NotificationInput(action.getDeletedMovie(), DELETE_MESSAGE));
+                    user.getNotifications().add(new NotificationInput(action.getDeletedMovie(),
+                            DELETE_MESSAGE));
 
                     // delete movie from its lists
-                    user.getPurchasedMovies().removeIf(movieInput -> movieInput.getName().equals(action.getDeletedMovie()));
-                    user.getWatchedMovies().removeIf(movieInput -> movieInput.getName().equals(action.getDeletedMovie()));
-                    user.getLikedMovies().removeIf(movieInput -> movieInput.getName().equals(action.getDeletedMovie()));
-                    user.getRatedMovies().removeIf(movieInput -> movieInput.getName().equals(action.getDeletedMovie()));
+                    user.getPurchasedMovies().removeIf(movieInput -> movieInput.getName().equals(
+                            action.getDeletedMovie()));
+                    user.getWatchedMovies().removeIf(movieInput -> movieInput.getName().equals(
+                            action.getDeletedMovie()));
+                    user.getLikedMovies().removeIf(movieInput -> movieInput.getName().equals(
+                            action.getDeletedMovie()));
+                    user.getRatedMovies().removeIf(movieInput -> movieInput.getName().equals(
+                            action.getDeletedMovie()));
 
                     // give back credits or free movie to user
                     if (user.getCredentials().getAccountType().equals(PREMIUM)) {

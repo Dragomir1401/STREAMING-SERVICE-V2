@@ -29,12 +29,15 @@ public class MovieInput {
         this.genres = new ArrayList<>();
         this.actors = new ArrayList<>();
         this.countriesBanned = new ArrayList<>();
-        if (movieInput.getGenres() != null)
+        if (movieInput.getGenres() != null) {
             this.genres.addAll(movieInput.getGenres());
-        if (movieInput.getActors() != null)
+        }
+        if (movieInput.getActors() != null) {
             this.actors.addAll(movieInput.getActors());
-        if (movieInput.getCountriesBanned() != null)
+        }
+        if (movieInput.getCountriesBanned() != null) {
             this.countriesBanned.addAll(movieInput.getCountriesBanned());
+        }
     }
 
 

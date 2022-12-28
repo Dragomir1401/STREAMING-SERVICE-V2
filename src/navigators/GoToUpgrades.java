@@ -8,7 +8,10 @@ import output.Output;
 import java.util.ArrayList;
 import java.util.List;
 
-import static constants.Constants.*;
+import static constants.Constants.SUCCESS;
+import static constants.Constants.UPGRADES;
+import static constants.Constants.FAILURE;
+
 
 public class GoToUpgrades implements NavigateCommand {
     private final PageNow pageNow;
@@ -18,7 +21,7 @@ public class GoToUpgrades implements NavigateCommand {
     private String previousName;
 
 
-    public GoToUpgrades(PageNow pageNow, Output output) {
+    public GoToUpgrades(final PageNow pageNow, final Output output) {
         this.pageNow = pageNow;
         this.output = output;
         this.previousMovie = new MovieInput();
@@ -35,11 +38,13 @@ public class GoToUpgrades implements NavigateCommand {
         if (pageNow.getUser().getUser() != null) {
             // save previous state for undo
             previousName = pageNow.getName();
-            if (pageNow.getMovie() != null)
+            if (pageNow.getMovie() != null) {
                 previousMovie = new MovieInput(pageNow.getMovie());
+            }
             previousMovieList = new ArrayList<>();
-            if (pageNow.getMovieList() != null)
+            if (pageNow.getMovieList() != null) {
                 previousMovieList.addAll(pageNow.getMovieList());
+            }
 
 
             // move to upgrades page

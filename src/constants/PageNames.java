@@ -9,16 +9,26 @@ public enum PageNames {
     HOMEPAGE("homepage"),
     MOVIES("movies");
 
-    public final String text;
+    private final String text;
 
-    PageNames(String text) {
+    public String getText() {
+        return text;
+    }
+
+    PageNames(final String text) {
         this.text = text;
     }
 
-    public static PageNames fromString(String text) {
-        for (PageNames commandType : PageNames.values()) {
-            if (commandType.text.equalsIgnoreCase(text)) {
-                return commandType;
+
+    /**
+     * generates page name from string
+     * @param text  string
+     * @return  page name
+     */
+    public static PageNames fromString(final String text) {
+        for (PageNames pageName : PageNames.values()) {
+            if (pageName.text.equalsIgnoreCase(text)) {
+                return pageName;
             }
         }
         return null;

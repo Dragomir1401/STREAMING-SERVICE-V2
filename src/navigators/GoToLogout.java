@@ -1,24 +1,19 @@
 package navigators;
 
-import input.MovieInput;
-import input.UserInput;
 import momentary.PageNow;
 import output.CommandOutput;
 import output.Output;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static constants.Constants.*;
-
+import static constants.Constants.HOMEPAGE;
+import static constants.Constants.SUCCESS;
+import static constants.Constants.FAILURE;
 
 public class GoToLogout implements NavigateCommand {
     private final PageNow pageNow;
     private final Output output;
     private String previousName;
-    private UserInput previousUser;
 
-    public GoToLogout(PageNow pageNow, Output output) {
+    public GoToLogout(final PageNow pageNow, final Output output) {
         this.pageNow = pageNow;
         this.output = output;
         this.previousName = null;

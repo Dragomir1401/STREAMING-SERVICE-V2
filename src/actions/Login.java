@@ -34,6 +34,13 @@ public class Login extends Command {
                         super.getPageNow().getUserCommands().findUserInDatabase(super.getInput(),
                                 super.getActionInput()));
 
+                // update users movies
+                if (super.getInput().getMovies() != null) {
+                    super.getPageNow().getUserCommands().updateUserMovies(
+                            super.getPageNow().getUser().getUser(), super.getInput(),
+                            super.getPageNow());
+                }
+
                 // set page to homepage with authentication
                 super.getPageNow().setName(HOMEPAGE);
 

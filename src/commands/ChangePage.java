@@ -1,12 +1,13 @@
 package commands;
 
 import input.ActionInput;
-import input.MovieInput;
 import momentary.PageNow;
-import navigators.*;
+import navigators.Receiver;
 import output.CommandOutput;
 import output.Output;
-import static constants.Constants.*;
+import static constants.Constants.LOGOUT;
+import static constants.Constants.MOVIES;
+import static constants.Constants.EMPTY_COMMAND_STACK;
 
 
 public final class ChangePage {
@@ -18,25 +19,31 @@ public final class ChangePage {
      * runs change page type commands
      * @param action - action input
      */
-    public static void next(ActionInput action, Reciever reciever) {
+    public static void next(final ActionInput action, final Receiver receiver) {
 
         // execute action using receiver
-        reciever.executeAction(action.getPage());
+        receiver.executeAction(action.getPage());
 
         // clear stack of actions in case of logout
         if (action.getType().equals(LOGOUT)) {
-            reciever.getInvoker().restart();
+            receiver.getInvoker().restart();
         }
     }
 
-    public static void back(final PageNow pageNow, final Output output, Reciever reciever) {
+    /**
+     * runs back navigator command
+     * @param pageNow  current page
+     * @param output  output structure
+     * @param receiver  receiver of commands
+     */
+    public static void back(final PageNow pageNow, final Output output, final Receiver receiver) {
         // check for logged users
         if (pageNow.getUser().getUser() == null) {
             output.getOutput().add(new CommandOutput());
             return;
         }
 
-        String previousPage = reciever.undo();
+        String previousPage = receiver.undo();
 
         if (previousPage != null) {
             if (previousPage.equals(MOVIES)) {

@@ -4,12 +4,17 @@ import database.Operations;
 import input.ActionInput;
 import input.Input;
 import momentary.PageNow;
-import navigators.Reciever;
+import navigators.Receiver;
 import output.Output;
 import subscribers.Recommendation;
 import subscribers.Subscribe;
 
-import static constants.Constants.*;
+import static constants.Constants.DEFAULT_COMMAND;
+import static constants.Constants.CHANGE_PAGE;
+import static constants.Constants.SUBSCRIBE;
+import static constants.Constants.BACK;
+import static constants.Constants.ON_PAGE;
+import static constants.Constants.DATABASE;
 
 
 public final class CommandParser {
@@ -24,22 +29,23 @@ public final class CommandParser {
      * @param output - output structure
      */
     public static void parse(final Input input, final PageNow pageNow, final Output output) {
-        Reciever reciever = new Reciever(input, pageNow, output);
+        Receiver receiver = new Receiver(input, pageNow, output);
         for (ActionInput action : input.getActions()) {
             // specify action for change page to see details
-            reciever.specifyAction(action);
+            receiver.specifyAction(action);
 
             switch (action.getType()) {
-                case CHANGE_PAGE -> ChangePage.next(action, reciever);
+                case CHANGE_PAGE -> ChangePage.next(action, receiver);
                 case ON_PAGE -> OnPage.run(input, pageNow, action, output);
-                case BACK -> ChangePage.back(pageNow, output, reciever);
+                case BACK -> ChangePage.back(pageNow, output, receiver);
                 case SUBSCRIBE -> Subscribe.subscribe(pageNow, output, action);
                 case DATABASE -> Operations.parseOperation(input, output, action);
                 default -> System.out.println(DEFAULT_COMMAND);
             }
         }
         // generate final recommendation if there is a current user logged
-        if (pageNow.getUser().getUser() != null)
+        if (pageNow.getUser().getUser() != null) {
             Recommendation.generateRecommendations(input, pageNow, output);
+        }
     }
 }

@@ -16,7 +16,16 @@ import input.ActionInput;
 import momentary.PageNow;
 import output.Output;
 
-import static constants.Constants.*;
+import static constants.Constants.RATE;
+import static constants.Constants.REGISTER;
+import static constants.Constants.LOGIN;
+import static constants.Constants.FILTER;
+import static constants.Constants.BUY_TOKENS;
+import static constants.Constants.LIKE;
+import static constants.Constants.WATCH;
+import static constants.Constants.SEARCH;
+import static constants.Constants.BUY_PREMIUM_ACCOUNT;
+import static constants.Constants.PURCHASE;
 
 
 public final class OnPage {

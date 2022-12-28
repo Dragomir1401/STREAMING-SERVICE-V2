@@ -162,6 +162,7 @@ public class ActionInput {
         return count;
     }
 
+
     /**
      * getter for subscribed genre
      * @return  genre
@@ -171,13 +172,15 @@ public class ActionInput {
     }
 
 
+
     /**
      * setter for subscribed genre
      * @param subscribedGenre  genre
      */
-    public void setSubscribedGenre(String subscribedGenre) {
+    public void setSubscribedGenre(final String subscribedGenre) {
         this.subscribedGenre = subscribedGenre;
     }
+
 
     /**
      * getter for added movie
@@ -188,13 +191,15 @@ public class ActionInput {
     }
 
 
+
     /**
      * setter for added movie
      * @param addedMovie  added movie
      */
-    public void setAddedMovie(MovieInput addedMovie) {
+    public void setAddedMovie(final MovieInput addedMovie) {
         this.addedMovie = addedMovie;
     }
+
 
     /**
      * getter for deleted movie
@@ -204,12 +209,4 @@ public class ActionInput {
         return deletedMovie;
     }
 
-
-    /**
-     * setter for deleted movie
-     * @param deletedMovie  deleted movie
-     */
-    public void setDeletedMovie(String deletedMovie) {
-        this.deletedMovie = deletedMovie;
-    }
 }

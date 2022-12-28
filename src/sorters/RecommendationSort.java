@@ -1,9 +1,6 @@
 package sorters;
 
-import input.MovieInput;
-import subscribers.Recommendation;
 import subscribers.RecommendationElement;
-
 import java.util.List;
 
 public interface RecommendationSort {

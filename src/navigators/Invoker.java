@@ -2,7 +2,9 @@ package navigators;
 
 import java.util.LinkedList;
 
-import static constants.Constants.*;
+import static constants.Constants.SUCCESS;
+import static constants.Constants.EMPTY_COMMAND_STACK;
+import static constants.Constants.POOR_UNDO;
 
 public class Invoker {
     private final LinkedList<NavigateCommand> historyExecuted = new LinkedList<>();
@@ -20,7 +22,7 @@ public class Invoker {
      * Executes a given command
      * @param command  command
      */
-    public void execute(NavigateCommand command) {
+    public void execute(final NavigateCommand command) {
         String result = command.execute();
         if (result.equals(SUCCESS)) {
             historyExecuted.push(command);
@@ -31,26 +33,14 @@ public class Invoker {
      * Undo the latest command
      */
     public String undo() {
-        if (historyExecuted.isEmpty())
+        if (historyExecuted.isEmpty()) {
             return EMPTY_COMMAND_STACK;
+        }
         NavigateCommand navigateCommand = historyExecuted.pop();
         if (navigateCommand != null) {
             historyUndo.push(navigateCommand);
             return navigateCommand.undo();
         }
         return POOR_UNDO;
-    }
-
-    /**
-     * Redo command previously undone. Cannot perform a redo after an execute, only after at least one undo.
-     */
-    public void redo() {
-        if (historyUndo.isEmpty())
-            return;
-        NavigateCommand navigateCommand = historyUndo.pop();
-        if (navigateCommand != null) {
-            historyExecuted.push(navigateCommand);
-            navigateCommand.execute();
-        }
     }
 }

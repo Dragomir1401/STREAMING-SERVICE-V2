@@ -4,6 +4,9 @@ import input.ActionInput;
 import input.Input;
 import input.MovieInput;
 import input.UserInput;
+import momentary.PageNow;
+
+import java.util.List;
 
 public class UserCommands {
     private static UserCommands instance;
@@ -92,5 +95,65 @@ public class UserCommands {
             }
         }
         return true;
+    }
+
+
+    /**
+     * updates user movies in all fields
+     * @param userInput  the user
+     * @param input  input structure
+     * @param pageNow  current page
+     */
+    public void updateUserMovies(final UserInput userInput, final Input input,
+                                 final PageNow pageNow) {
+        for (MovieInput movie : input.getMovies()) {
+            // modify movie in all its appearances
+            int index = findMovieIndex(userInput.getPurchasedMovies(), movie.getName());
+            if (index >= 0) {
+                userInput.getPurchasedMovies().set(index, new MovieInput(movie));
+            }
+
+
+            index = findMovieIndex(userInput.getWatchedMovies(), movie.getName());
+            if (index >= 0) {
+                userInput.getWatchedMovies().set(index, new MovieInput(movie));
+            }
+
+            index = findMovieIndex(userInput.getLikedMovies(), movie.getName());
+            if (index >= 0) {
+                userInput.getLikedMovies().set(index, new MovieInput(movie));
+            }
+
+
+            index = findMovieIndex(userInput.getRatedMovies(), movie.getName());
+            if (index >= 0) {
+                userInput.getRatedMovies().set(index, new MovieInput(movie));
+            }
+
+            if (pageNow.getMovieList() != null) {
+                index = findMovieIndex(pageNow.getMovieList(), movie.getName());
+                if (index >= 0) {
+                    pageNow.getMovieList().set(index, new MovieInput(movie));
+                }
+            }
+        }
+    }
+
+
+    /**
+     * finds index of the movie
+     * @param movies - list of movies where we search
+     * @param movieName - name of the movie
+     * @return - the found index
+     */
+    public int findMovieIndex(final List<MovieInput> movies, final String movieName) {
+        int index = 0;
+        for (MovieInput movie : movies) {
+            if (movie.getName().equals(movieName)) {
+                return index;
+            }
+            index++;
+        }
+        return -1;
     }
 }

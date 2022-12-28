@@ -217,7 +217,7 @@ public class UserInput {
      * setter for notifications list
      * @param notifications  notifications
      */
-    public void setNotifications(List<NotificationInput> notifications) {
+    public void setNotifications(final List<NotificationInput> notifications) {
         this.notifications = notifications;
     }
 

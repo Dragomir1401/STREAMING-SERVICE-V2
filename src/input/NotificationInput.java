@@ -8,7 +8,7 @@ public class NotificationInput {
 
     }
 
-    public NotificationInput(String movieName, String message) {
+    public NotificationInput(final String movieName, final String message) {
         this.movieName = movieName;
         this.message = message;
     }
@@ -25,7 +25,7 @@ public class NotificationInput {
      * setter for movie name
      * @param movieName  movie name
      */
-    public void setMovieName(String movieName) {
+    public void setMovieName(final String movieName) {
         this.movieName = movieName;
     }
 
@@ -41,7 +41,7 @@ public class NotificationInput {
      * setter for message
      * @param message  message
      */
-    public void setMessage(String message) {
+    public void setMessage(final String message) {
         this.message = message;
     }
 }

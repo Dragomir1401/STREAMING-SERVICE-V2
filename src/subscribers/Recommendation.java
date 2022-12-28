@@ -7,28 +7,128 @@ import input.UserInput;
 import momentary.PageNow;
 import output.CommandOutput;
 import output.Output;
-import sorters.RecommendationSort;
 import sorters.SortByLikes;
 import sorters.SortRecommendationsByLikes;
-
 import java.util.ArrayList;
 import java.util.List;
+import static constants.Constants.PREMIUM;
+import static constants.Constants.DECREASING;
+import static constants.Constants.RECOMMENDATION;
+import static constants.Constants.NO_RECOMMENDATION;
 
-import static constants.Constants.*;
 
-public class Recommendation {
-    public static void generateRecommendations(Input input, PageNow pageNow, Output output) {
-        if (pageNow.getUser().getUser().getCredentials().getAccountType().equals(PREMIUM))
-            generateRecommendation(pageNow.getUser().getUser(), input, output);
+public final class Recommendation {
+
+    private Recommendation() {
+
     }
 
-    private static void generateRecommendation(UserInput user, Input input, Output output) {
+
+    /**
+     * generates recommendation for current user
+     * @param input  input structure
+     * @param pageNow  current page
+     * @param output  output structure
+     */
+    public static void generateRecommendations(final Input input, final PageNow pageNow,
+                                               final Output output) {
+        if (pageNow.getUser().getUser().getCredentials().getAccountType().equals(PREMIUM)) {
+            generateRecommendation(pageNow.getUser().getUser(), input, output);
+        }
+    }
+
+
+    /**
+     * generates recommendation for given user
+     * @param input  input structure
+     * @param user  given user
+     * @param output  output structure
+     */
+    private static void generateRecommendation(final UserInput user, final Input input,
+                                               final Output output) {
+
+        // create criteria for notification
         List<RecommendationElement> likedGenres = new ArrayList<>();
+        List<MovieInput> databaseMovies = createTop(user, likedGenres, input);
+
+
+        // add recommendation notification
+        boolean doneRecommending = false;
+        for (RecommendationElement recommendationElement : likedGenres) {
+            for (MovieInput movie : databaseMovies) {
+                if (!containsMovie(user.getWatchedMovies(), movie)
+                        && movie.getGenres().contains(recommendationElement.getGenre())
+                        && !doneRecommending) {
+
+                    user.getNotifications().add(new NotificationInput(movie.getName(),
+                            RECOMMENDATION));
+                    output.getOutput().add(new CommandOutput(user));
+                    doneRecommending = true;
+                }
+            }
+        }
+
+
+        // case for no recommendation
+        if (!doneRecommending) {
+            user.getNotifications().add(new NotificationInput(NO_RECOMMENDATION, RECOMMENDATION));
+            output.getOutput().add(new CommandOutput(user));
+        }
+    }
+
+
+    /**
+     * finds recommendation structure
+     * @param likedGenres  user top liked genres
+     * @param genre  genre
+     * @return  recommendation
+     */
+    private static RecommendationElement findRecommendation(
+            final List<RecommendationElement> likedGenres, final String genre) {
+
+        for (RecommendationElement recommendationElement : likedGenres) {
+            if (recommendationElement.getGenre().equals(genre)) {
+                return recommendationElement;
+            }
+        }
+
+        return null;
+    }
+
+
+    /**
+     * checks if list contains given movie
+     * @param list  list of movies
+     * @param movie  movie
+     * @return  true/false
+     */
+    private static boolean containsMovie(final List<MovieInput> list, final MovieInput movie) {
+        for (MovieInput movieInput : list) {
+            if (movieInput.getName().equals(movie.getName())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    /**
+     * creates a top of like movies and liked genres
+     * @param user  given user
+     * @param likedGenres  genres like by user
+     * @param input  input structure
+     * @return  movies sorted by preference
+     */
+    private static List<MovieInput> createTop(final UserInput user,
+                                              final List<RecommendationElement> likedGenres,
+                                              final Input input) {
 
         // make a top of liked genres for the user
         for (MovieInput movie : user.getLikedMovies()) {
             for (String genre : movie.getGenres()) {
-                RecommendationElement recommendationElement = findRecommendation(likedGenres, genre);
+                RecommendationElement recommendationElement = findRecommendation(likedGenres,
+                        genre);
+
                 if (recommendationElement == null) {
                     RecommendationElement newElement = new RecommendationElement(genre);
                     newElement.increaseLikeCount();
@@ -39,9 +139,11 @@ public class Recommendation {
             }
         }
 
+
         // sort recommendations decreasingly
         SortRecommendationsByLikes sort = new SortRecommendationsByLikes();
         sort.run(likedGenres, DECREASING);
+
 
         // see if database is uniform in number of likes
         List<MovieInput> databaseMovies = new ArrayList<>(input.getMovies());
@@ -63,40 +165,6 @@ public class Recommendation {
         }
 
 
-        // add recommendation notification
-        boolean doneRecommending = false;
-        for (RecommendationElement recommendationElement : likedGenres) {
-            for (MovieInput movie : databaseMovies) {
-                if (!containsMovie(user.getWatchedMovies(), movie)
-                        && movie.getGenres().contains(recommendationElement.getGenre()) && !doneRecommending) {
-                    user.getNotifications().add(new NotificationInput(movie.getName(), RECOMMENDATION));
-                    output.getOutput().add(new CommandOutput(user));
-                    doneRecommending = true;
-                }
-            }
-        }
-
-        if (!doneRecommending) {
-            user.getNotifications().add(new NotificationInput(NO_RECOMMENDATION, RECOMMENDATION));
-            output.getOutput().add(new CommandOutput(user));
-        }
-    }
-
-    private static RecommendationElement findRecommendation(List<RecommendationElement> likedGenres, String genre) {
-        for (RecommendationElement recommendationElement : likedGenres) {
-            if (recommendationElement.getGenre().equals(genre)) {
-                return recommendationElement;
-            }
-        }
-        return null;
-    }
-
-    private static boolean containsMovie(List<MovieInput> list, MovieInput movie) {
-        for (MovieInput movieInput : list) {
-            if (movieInput.getName().equals(movie.getName())) {
-                return true;
-            }
-        }
-        return false;
+        return databaseMovies;
     }
 }

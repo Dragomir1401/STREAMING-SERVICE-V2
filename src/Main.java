@@ -23,8 +23,6 @@ public final class Main {
      * @throws IOException - file opening exception
      */
     public static void main(final String[] args) throws IOException {
-        // variable for number of tests
-        final int numberOfTests = 10;
         // initialise mapper
         ObjectMapper objectMapper = new ObjectMapper();
 

@@ -6,12 +6,10 @@ import input.Input;
 import momentary.PageNow;
 import navigators.Receiver;
 import output.Output;
-import subscribers.Recommendation;
-import subscribers.Subscribe;
+import recommendation.Recommendation;
 
 import static constants.Constants.DEFAULT_COMMAND;
 import static constants.Constants.CHANGE_PAGE;
-import static constants.Constants.SUBSCRIBE;
 import static constants.Constants.BACK;
 import static constants.Constants.ON_PAGE;
 import static constants.Constants.DATABASE;
@@ -38,7 +36,6 @@ public final class CommandParser {
                 case CHANGE_PAGE -> ChangePage.next(action, receiver);
                 case ON_PAGE -> OnPage.run(input, pageNow, action, output);
                 case BACK -> ChangePage.back(pageNow, output, receiver);
-                case SUBSCRIBE -> Subscribe.subscribe(pageNow, output, action);
                 case DATABASE -> Operations.parseOperation(input, output, action);
                 default -> System.out.println(DEFAULT_COMMAND);
             }

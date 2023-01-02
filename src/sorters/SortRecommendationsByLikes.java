@@ -1,6 +1,6 @@
 package sorters;
 
-import subscribers.RecommendationElement;
+import recommendation.RecommendationElement;
 import java.util.Comparator;
 import java.util.List;
 import static constants.Constants.DECREASING;

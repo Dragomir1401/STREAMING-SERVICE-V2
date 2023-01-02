@@ -1,6 +1,6 @@
 package sorters;
 
-import subscribers.RecommendationElement;
+import recommendation.RecommendationElement;
 import java.util.List;
 
 public interface RecommendationSort {

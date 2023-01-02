@@ -207,8 +207,6 @@ public class MovieCommands {
 
         if (!movieAlreadyWatched) {
             pageNow.getUser().getUser().getWatchedMovies().add(new MovieInput(movie));
-        } else {
-            return;
         }
 
         // create output

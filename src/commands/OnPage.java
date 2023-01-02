@@ -1,32 +1,32 @@
 package commands;
 
-import actions.BuyTokens;
-import actions.BuyPremium;
-import actions.Command;
-import actions.Filter;
-import actions.Login;
-import actions.Like;
-import actions.Purchase;
-import actions.Register;
 import actions.Rate;
+import actions.Register;
+import actions.Login;
+import actions.Filter;
+import actions.BuyPremium;
+import actions.BuyTokens;
+import actions.Command;
 import actions.Watch;
+import actions.Purchase;
+import actions.Subscribe;
 import actions.Search;
+import actions.Like;
 import input.Input;
 import input.ActionInput;
 import momentary.PageNow;
 import output.Output;
-
 import static constants.Constants.RATE;
 import static constants.Constants.REGISTER;
 import static constants.Constants.LOGIN;
 import static constants.Constants.FILTER;
-import static constants.Constants.BUY_TOKENS;
-import static constants.Constants.LIKE;
-import static constants.Constants.WATCH;
-import static constants.Constants.SEARCH;
-import static constants.Constants.BUY_PREMIUM_ACCOUNT;
 import static constants.Constants.PURCHASE;
-
+import static constants.Constants.SEARCH;
+import static constants.Constants.BUY_TOKENS;
+import static constants.Constants.BUY_PREMIUM_ACCOUNT;
+import static constants.Constants.SUBSCRIBE;
+import static constants.Constants.WATCH;
+import static constants.Constants.LIKE;
 
 public final class OnPage {
     private OnPage() {
@@ -75,6 +75,10 @@ public final class OnPage {
                 case BUY_PREMIUM_ACCOUNT -> {
                     return new BuyPremium(input, pageNow, action,
                                 output);
+                }
+                case SUBSCRIBE -> {
+                    return new Subscribe(input, pageNow, action,
+                            output);
                 }
                 default -> throw new IllegalArgumentException("The command type "
                         + action.getFeature() + " is not recognized.");
